@@ -288,10 +288,6 @@
                                 <div class="w-6 h-6 rounded-full bg-brand flex items-center justify-center text-xs font-bold">✓</div>
                                 <span>资深专家策略 + 初级执行成本 = 超高性价比</span>
                             </li>
-                              <li class="flex items-center gap-3">
-                                <div class="w-6 h-6 rounded-full bg-brand flex items-center justify-center text-xs font-bold">✓</div>
-                                <span>基于大量实操案例经验，应用最新成功方法</span>
-                            </li>
                         </ul>
                     </div>
                     <div class="lg:text-right">
@@ -885,7 +881,7 @@
     <!-- Scripts for Modals and Carousel -->
     <script>
         // ⚠️ 替换为您自己的 Google Apps Script Web App URL
-        const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxBJm5yoxTbTR9th9kxp8gYuHG7zXgyfVM4QMtiCtoIB18rWsskLLO7yvKDCNBpklPz/exec";
+        const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyeM51r1bbsyz3RL5H8I3G8okFwqUZ3VMPXcZsqMU3kddiafRw__V20EgCdgySt6hw4/exec";
 
         function submitToGoogleSheet(e, formType) {
             e.preventDefault();
@@ -904,6 +900,10 @@
             for (const pair of formData) {
                 data.append(pair[0], pair[1]);
             }
+
+            // Debugging Log
+            console.log('Submitting to:', GOOGLE_SCRIPT_URL);
+            console.log('Data:', data.toString());
 
             fetch(GOOGLE_SCRIPT_URL, {
                 method: 'POST',
