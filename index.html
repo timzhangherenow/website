@@ -14,16 +14,16 @@
     <meta property="og:url" content="https://herenow.services/">
     <meta property="og:title" content="HereNow | AI赋能 B2B出海内容营销服务">
     <meta property="og:description" content="拒绝无效投入，用基础员工成本获得资深营销合伙人。SEO/GEO/社媒全链路闭环，助力中国B2B企业出海增长。">
-    <meta property="og:image" content="https://herenow.services/images/share-card.png"> <!-- 建议替换为您的一张 1200x630 的分享卡片图 -->
+    <meta property="og:image" content="https://herenow.services/images/share-card.png"> 
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://herenow.services/">
     <meta property="twitter:title" content="HereNow | AI赋能 B2B出海内容营销服务">
     <meta property="twitter:description" content="拒绝无效投入，用基础员工成本获得资深营销合伙人。SEO/GEO/社媒全链路闭环，助力中国B2B企业出海增长。">
-    <meta property="twitter:image" content="https://herenow.services/images/share-card.png"> <!-- 同上，建议替换为您的分享卡片图 -->
+    <meta property="twitter:image" content="https://herenow.services/images/share-card.png">
     
-    <!-- 移动端视口设置 (如果还没加的话) -->
+    <!-- 移动端视口设置 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Schema.org Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -177,6 +177,21 @@
             -ms-overflow-style: none;  /* IE and Edge */
             scrollbar-width: none;  /* Firefox */
         }
+
+        /* FAQ Accordion Transition */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary ~ * {
+            animation: sweep .3s ease-in-out;
+        }
+        @keyframes sweep {
+            0%    {opacity: 0; transform: translateY(-10px)}
+            100%  {opacity: 1; transform: translateY(0)}
+        }
     </style>
     
     <script>
@@ -213,8 +228,10 @@
             
             <div class="hidden md:flex space-x-8 items-center font-medium text-sm text-slate-600">
                 <a href="#about" class="hover:text-brand transition-colors">关于我们</a>
+                <a href="#value-mismatch" class="hover:text-brand transition-colors">价值重构</a>
                 <a href="#problems" class="hover:text-brand transition-colors">行业痛点</a>
                 <a href="#services" class="hover:text-brand transition-colors">服务体系</a>
+                <a href="#process" class="hover:text-brand transition-colors">合作流程</a>
                 <a href="#cases" class="hover:text-brand transition-colors">客户口碑</a>
             </div>
 
@@ -225,7 +242,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden" id="about">
         <div class="blob-bg bg-brand-100 w-96 h-96 rounded-full top-0 left-[-100px]"></div>
         <div class="blob-bg bg-blue-100 w-96 h-96 rounded-full bottom-0 right-[-100px]"></div>
 
@@ -317,6 +334,122 @@
                     </div>
                 </div>
                 <div class="absolute inset-0 bg-brand rounded-3xl transform translate-x-4 translate-y-4 -z-10 opacity-20"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Value Mismatch (价值重构) -->
+    <section id="value-mismatch" class="py-24 bg-slate-900 relative overflow-hidden text-white">
+        <!-- Background decorative elements -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-brand opacity-10 rounded-full blur-[100px] transform translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-600 opacity-10 rounded-full blur-[100px] transform -translate-x-1/2 translate-y-1/2"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="font-brand text-3xl lg:text-5xl font-bold mb-6 leading-tight">
+                    拒绝价值错配<br>
+                    <span class="text-brand">您本该是流量主，而非广告主</span>
+                </h2>
+                <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+                    中国出海企业拥有世界级的制造工艺、技术方案与成功案例。这些宝贵的资产，本应是吸引海外买家主动学习的流量源。却因不会包装内容，不懂SEO技术与规则，网站变成了无人问津的孤岛。不断花钱买“吆喝”，转化率难以保障。
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+                <!-- Left: The Current Reality (Advertiser) -->
+                <div class="bg-white/5 rounded-3xl p-8 border border-white/10 relative group hover:bg-white/10 transition-colors">
+                    <div class="absolute -top-6 left-8 bg-slate-800 text-slate-400 px-4 py-2 rounded-lg text-sm font-bold border border-slate-700">
+                        现状：价值被阻断
+                    </div>
+                    
+                    <!-- Top Assets -->
+                    <div class="flex justify-center gap-3 mb-8 opacity-50 grayscale group-hover:grayscale-0 transition-all duration-500">
+                        <div class="bg-slate-800 p-3 rounded-xl border border-slate-700 text-xs text-center w-24">
+                            <div class="text-2xl mb-1">🏭</div>
+                            制造能力
+                        </div>
+                        <div class="bg-slate-800 p-3 rounded-xl border border-slate-700 text-xs text-center w-24">
+                            <div class="text-2xl mb-1">💡</div>
+                            技术方案
+                        </div>
+                        <div class="bg-slate-800 p-3 rounded-xl border border-slate-700 text-xs text-center w-24">
+                            <div class="text-2xl mb-1">📚</div>
+                            客户案例
+                        </div>
+                    </div>
+
+                    <!-- The Gap -->
+                    <div class="flex flex-col items-center justify-center text-center relative py-4">
+                        <div class="w-0.5 h-12 bg-red-500/30"></div>
+                        <div class="bg-red-500/10 text-red-400 px-6 py-2 rounded-full border border-red-500/20 text-sm font-bold my-2 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            缺 内容/SEO/规则
+                        </div>
+                        <div class="w-0.5 h-12 bg-red-500/30"></div>
+                    </div>
+
+                    <!-- The Result -->
+                    <div class="bg-red-900/20 border border-red-500/20 rounded-2xl p-6 text-center mt-4">
+                        <h4 class="text-red-400 font-bold text-xl mb-2">被动的“广告主”</h4>
+                        <p class="text-slate-400 text-sm mb-4">缺少优质内容，或无法被检索，被迫购买高价广告流量</p>
+                        <div class="flex items-center justify-center gap-4 text-xs text-slate-500">
+                            <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-red-500"></span> 预算黑洞</span>
+                            <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-red-500"></span> 停投即停效</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: The Ideal State (Traffic Owner) -->
+                <div class="bg-gradient-to-br from-brand/10 to-brand-600/10 rounded-3xl p-8 border border-brand/30 relative shadow-[0_0_50px_-12px_rgba(255,107,61,0.2)]">
+                    <div class="absolute -top-6 left-8 bg-brand text-white px-4 py-2 rounded-lg text-sm font-bold shadow-lg shadow-brand/40">
+                        目标：价值货币化
+                    </div>
+
+                    <!-- Top Assets (Activated) -->
+                    <div class="flex justify-center gap-3 mb-8">
+                        <div class="bg-slate-800 p-3 rounded-xl border border-brand/40 text-xs text-center w-24 shadow-[0_0_15px_rgba(255,107,61,0.3)] transform -translate-y-1">
+                            <div class="text-2xl mb-1">🏭</div>
+                            <span class="text-white font-bold">制造能力</span>
+                        </div>
+                        <div class="bg-slate-800 p-3 rounded-xl border border-brand/40 text-xs text-center w-24 shadow-[0_0_15px_rgba(255,107,61,0.3)] transform -translate-y-1">
+                            <div class="text-2xl mb-1">💡</div>
+                            <span class="text-white font-bold">技术方案</span>
+                        </div>
+                        <div class="bg-slate-800 p-3 rounded-xl border border-brand/40 text-xs text-center w-24 shadow-[0_0_15px_rgba(255,107,61,0.3)] transform -translate-y-1">
+                            <div class="text-2xl mb-1">📚</div>
+                            <span class="text-white font-bold">客户案例</span>
+                        </div>
+                    </div>
+
+                    <!-- The Solution Bridge -->
+                    <div class="flex flex-col items-center justify-center text-center relative py-4">
+                         <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-0.5 h-full bg-gradient-to-b from-brand/0 via-brand to-brand/0"></div>
+                         </div>
+                        <div class="bg-brand text-white px-6 py-2 rounded-full shadow-lg shadow-brand/30 text-sm font-bold my-2 flex items-center gap-2 relative z-10">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            HereNow 内容策略 + SEO/GEO
+                        </div>
+                    </div>
+
+                    <!-- The Result -->
+                    <div class="bg-brand/10 border border-brand/30 rounded-2xl p-6 text-center mt-4 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand/10 to-transparent"></div>
+                        <h4 class="text-brand font-bold text-xl mb-2 relative z-10">主动的“流量主”</h4>
+                        <p class="text-slate-300 text-sm mb-4 relative z-10">内容成为 24h 工作的销售，买家主动检索并留资</p>
+                        <div class="flex items-center justify-center gap-4 text-xs text-brand-100 relative z-10">
+                            <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-brand"></span> 资产复利</span>
+                            <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-brand"></span> 持续增长</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Arrow Indicator (Mobile only mostly, or centering graphic) -->
+            <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 hidden lg:block">
+                <div class="bg-slate-900 p-2 rounded-full border border-slate-700">
+                    <svg class="w-8 h-8 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </div>
             </div>
         </div>
     </section>
@@ -516,10 +649,11 @@
             </div>
 
             <div class="grid md:grid-cols-2 gap-8">
-                <!-- Service Cards 1-4 (Same as before) -->
-                <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 flex">
+                <!-- Service Cards 1-4 -->
+                <!-- Card 1 -->
+                <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 flex group">
                     <div class="flex-1 pr-4">
-                        <div class="w-14 h-14 bg-brand text-white rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 shadow-lg shadow-brand/30">1</div>
+                        <div class="w-14 h-14 bg-white text-brand border-2 border-brand rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 shadow-lg transition-all duration-300 group-hover:bg-brand group-hover:text-white group-hover:border-transparent group-hover:shadow-brand/30">1</div>
                         <h3 class="font-brand text-2xl font-bold text-slate-900 mb-4">营销策略定制</h3>
                         <ul class="space-y-3 text-slate-600">
                             <li class="flex items-start gap-2"><span class="text-brand mt-1">•</span><span>目标客群画像与竞品深度分析</span></li>
@@ -539,9 +673,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 flex">
+
+                <!-- Card 2 -->
+                <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 flex group">
                     <div class="flex-1 pr-4">
-                        <div class="w-14 h-14 bg-white text-brand border-2 border-brand rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 shadow-lg">2</div>
+                        <div class="w-14 h-14 bg-white text-brand border-2 border-brand rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 shadow-lg transition-all duration-300 group-hover:bg-brand group-hover:text-white group-hover:border-transparent group-hover:shadow-brand/30">2</div>
                         <h3 class="font-brand text-2xl font-bold text-slate-900 mb-4">网站策划与运营</h3>
                         <ul class="space-y-3 text-slate-600">
                             <li class="flex items-start gap-2"><span class="text-brand mt-1">•</span><span>诊断网站现有问题，解决增长卡点</span></li>
@@ -561,9 +697,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 flex">
+
+                <!-- Card 3 -->
+                <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 flex group">
                     <div class="flex-1 pr-4">
-                        <div class="w-14 h-14 bg-white text-brand border-2 border-brand rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 shadow-lg">3</div>
+                        <div class="w-14 h-14 bg-white text-brand border-2 border-brand rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 shadow-lg transition-all duration-300 group-hover:bg-brand group-hover:text-white group-hover:border-transparent group-hover:shadow-brand/30">3</div>
                         <h3 class="font-brand text-2xl font-bold text-slate-900 mb-4">SEO/GEO 代运营</h3>
                         <ul class="space-y-3 text-slate-600">
                             <li class="flex items-start gap-2"><span class="text-brand mt-1">•</span><span>客户搜索意图分析，话题矩阵构建</span></li>
@@ -583,9 +721,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 flex">
+
+                <!-- Card 4 -->
+                <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 flex group">
                     <div class="flex-1 pr-4">
-                        <div class="w-14 h-14 bg-white text-brand border-2 border-brand rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 shadow-lg">4</div>
+                        <div class="w-14 h-14 bg-white text-brand border-2 border-brand rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 shadow-lg transition-all duration-300 group-hover:bg-brand group-hover:text-white group-hover:border-transparent group-hover:shadow-brand/30">4</div>
                         <h3 class="font-brand text-2xl font-bold text-slate-900 mb-4">海外社媒代运营</h3>
                         <ul class="space-y-3 text-slate-600">
                             <li class="flex items-start gap-2"><span class="text-brand mt-1">•</span><span>LinkedIn/X B2B 专业账号运营</span></li>
@@ -609,8 +749,209 @@
         </div>
     </section>
 
-    <!-- NEW SECTION: Featured Case Studies (Carousel) -->
-    <section id="featured-cases" class="py-24 bg-slate-50 relative overflow-hidden">
+    <!-- NEW SECTION: Cooperation Process (合作流程) -->
+    <section id="process" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-brand font-bold tracking-wider text-sm uppercase">Process</span>
+                <h2 class="font-brand text-3xl lg:text-4xl font-bold text-slate-900 mt-2">
+                    合作流程与SOP
+                </h2>
+                <p class="mt-2 text-slate-500">透明化、标准化的交付流程，让每一次增长都有迹可循</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6 relative">
+                <!-- Connecting Line (Desktop) -->
+                <div class="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-gradient-to-r from-brand/0 via-brand/30 to-brand/0 z-0"></div>
+
+                <!-- Step 1 -->
+                <div class="relative z-10 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-glow transition-all group text-center flex flex-col h-full">
+                    <div class="w-24 h-24 mx-auto bg-brand-50 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform relative border-4 border-white shadow-lg shrink-0">
+                        <span class="font-logo text-3xl text-brand">01</span>
+                    </div>
+                    <h3 class="font-brand text-xl font-bold text-slate-900 mb-1">诊断与策略</h3>
+                    <p class="text-xs font-bold text-brand uppercase mb-3 tracking-wide">Week 1-2</p>
+                    
+                    <!-- Action Description -->
+                    <p class="text-sm text-slate-500 mb-4 h-12 flex items-center justify-center px-2">
+                        分析网站现有问题，制定整改落地策略
+                    </p>
+
+                    <!-- Deliverables -->
+                    <div class="mt-auto bg-slate-50 p-4 rounded-xl text-left w-full border border-slate-100">
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 block border-b border-slate-200 pb-2">交付产出物</span>
+                        <ul class="text-sm text-slate-700 space-y-2">
+                            <li class="flex items-start gap-2">
+                                <span class="text-brand shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="leading-tight">网站流量诊断报告</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-brand shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="leading-tight">网站内容架构优化方案</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative z-10 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-glow transition-all group text-center flex flex-col h-full">
+                    <div class="w-24 h-24 mx-auto bg-brand-50 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform relative border-4 border-white shadow-lg shrink-0">
+                        <span class="font-logo text-3xl text-brand">02</span>
+                    </div>
+                    <h3 class="font-brand text-xl font-bold text-slate-900 mb-1">搭建AI知识库</h3>
+                    <p class="text-xs font-bold text-brand uppercase mb-3 tracking-wide">Month 1</p>
+                    
+                     <!-- Action Description -->
+                    <p class="text-sm text-slate-500 mb-4 h-12 flex items-center justify-center px-2 leading-tight">
+                        整合资料，分析客户画像与需求，梳理购买旅程选题库
+                    </p>
+
+                    <!-- Deliverables -->
+                    <div class="mt-auto bg-slate-50 p-4 rounded-xl text-left w-full border border-slate-100">
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 block border-b border-slate-200 pb-2">交付产出物</span>
+                        <ul class="text-sm text-slate-700 space-y-2">
+                            <li class="flex items-start gap-2">
+                                <span class="text-brand shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="leading-tight">公司AI知识库</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-brand shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="leading-tight">目标客户需求分析</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative z-10 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-glow transition-all group text-center flex flex-col h-full">
+                    <div class="w-24 h-24 mx-auto bg-brand-50 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform relative border-4 border-white shadow-lg shrink-0">
+                        <span class="font-logo text-3xl text-brand">03</span>
+                    </div>
+                    <h3 class="font-brand text-xl font-bold text-slate-900 mb-1">内容规划与输出</h3>
+                    <p class="text-xs font-bold text-brand uppercase mb-3 tracking-wide">Month 2-3</p>
+                    
+                     <!-- Action Description -->
+                    <p class="text-sm text-slate-500 mb-4 h-12 flex items-center justify-center px-2 leading-tight">
+                        基于采购旅程规划选题，输出EEAT博客及社媒内容
+                    </p>
+
+                    <!-- Deliverables -->
+                    <div class="mt-auto bg-slate-50 p-4 rounded-xl text-left w-full border border-slate-100">
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 block border-b border-slate-200 pb-2">交付产出物</span>
+                        <ul class="text-sm text-slate-700 space-y-2">
+                            <li class="flex items-start gap-2">
+                                <span class="text-brand shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="leading-tight">优质选题规划及博客撰写</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-brand shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="leading-tight">LinkedIn图文与YouTube视频</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative z-10 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-glow transition-all group text-center flex flex-col h-full">
+                    <div class="w-24 h-24 mx-auto bg-brand-50 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform relative border-4 border-white shadow-lg shrink-0">
+                        <span class="font-logo text-3xl text-brand">04</span>
+                    </div>
+                    <h3 class="font-brand text-xl font-bold text-slate-900 mb-1">复盘与迭代</h3>
+                    <p class="text-xs font-bold text-brand uppercase mb-3 tracking-wide">Monthly</p>
+                    
+                     <!-- Action Description -->
+                    <p class="text-sm text-slate-500 mb-4 h-12 flex items-center justify-center px-2 leading-tight">
+                        数据复盘与策略调整，持续优化转化效果
+                    </p>
+
+                    <!-- Deliverables -->
+                    <div class="mt-auto bg-slate-50 p-4 rounded-xl text-left w-full border border-slate-100">
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 block border-b border-slate-200 pb-2">交付产出物</span>
+                        <ul class="text-sm text-slate-700 space-y-2">
+                            <li class="flex items-start gap-2">
+                                <span class="text-brand shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="leading-tight">月度数据报告</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-brand shrink-0 mt-0.5 font-bold">✓</span>
+                                <span class="leading-tight">网站落地页优化方案</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: FAQ (常见问题) -->
+    <section class="py-24 bg-slate-50 relative">
+         <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-brand font-bold tracking-wider text-sm uppercase">FAQ</span>
+                <h2 class="font-brand text-3xl lg:text-4xl font-bold text-slate-900 mt-2">
+                    常见问题解答
+                </h2>
+                <p class="mt-2 text-slate-500">关于合作模式、收费标准与效果承诺</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- Q1 -->
+                <details class="group bg-white rounded-2xl shadow-sm border border-slate-100 open:ring-1 open:ring-brand/20 transition-all">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer font-bold text-lg text-slate-800 hover:text-brand transition-colors">
+                        <span>具体的合作收费模式是怎样的？</span>
+                        <span class="transform group-open:rotate-180 transition-transform text-brand">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-slate-600 leading-relaxed">
+                        我们采用“月度服务费 + 效果激励”的灵活模式。基础月费包含所有的策略制定、内容生产（AI+人工）、网站技术维护及社媒内容运营。相比传统代运营动辄年付几十万，我们支持按月支付，且无任何隐形消费。具体报价需根据您当前的网站状况和竞争难度评估。
+                    </div>
+                </details>
+
+                <!-- Q2 -->
+                <details class="group bg-white rounded-2xl shadow-sm border border-slate-100 open:ring-1 open:ring-brand/20 transition-all">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer font-bold text-lg text-slate-800 hover:text-brand transition-colors">
+                        <span>多久能看到效果？有效果保证吗？</span>
+                        <span class="transform group-open:rotate-180 transition-transform text-brand">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-slate-600 leading-relaxed">
+                        B2B SEO/GEO 是一个积累的过程。通常在合作的第 2-3 个月开始看到明显的关键词排名提升和长尾流量增长；第 4-6 个月进入询盘爆发期。虽然 Google 算法无法被100%操控，但我们会制定明确的月度 KPI（如收录量、排名词数、曝光量），若连续两月未达标，您可以随时终止合作。
+                    </div>
+                </details>
+
+                <!-- Q3 -->
+                <details class="group bg-white rounded-2xl shadow-sm border border-slate-100 open:ring-1 open:ring-brand/20 transition-all">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer font-bold text-lg text-slate-800 hover:text-brand transition-colors">
+                        <span>我们行业非常垂直冷门，AI能写出专业内容吗？</span>
+                        <span class="transform group-open:rotate-180 transition-transform text-brand">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-slate-600 leading-relaxed">
+                        这正是我们的核心优势。我们不直接使用通用 AI 生成内容。我们会先利用您的产品手册、白皮书搭建专属“知识库(Knowledge Base)”，并结合专家经验进行 Prompt 工程微调。所有内容产出后，均会有具备行业经验的编辑进行 Fact Check 和润色，确保内容既符合 Google 算法喜好，又具备行业深度。
+                    </div>
+                </details>
+
+                <!-- Q4 -->
+                <details class="group bg-white rounded-2xl shadow-sm border border-slate-100 open:ring-1 open:ring-brand/20 transition-all">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer font-bold text-lg text-slate-800 hover:text-brand transition-colors">
+                        <span>我已经有网站运营团队了，还需要你们吗？</span>
+                        <span class="transform group-open:rotate-180 transition-transform text-brand">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-slate-600 leading-relaxed">
+                        非常需要。我们不是来替代您的团队，而是作为“专家外挂”存在。大多数内部团队缺乏系统的 SEO 策略和 AI 实操经验，容易陷入低效执行。我们可以提供策略指导、SOP 培训和技术难题攻克，帮助您的团队将效率提升 5-10 倍。
+                    </div>
+                </details>
+            </div>
+         </div>
+    </section>
+
+    <!-- Featured Case Studies (Carousel) -->
+    <section id="featured-cases" class="py-24 bg-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
                 <span class="text-brand font-bold tracking-wider text-sm uppercase">Success Stories</span>
@@ -781,7 +1122,7 @@
     </section>
 
     <!-- 客户口碑 -->
-    <section id="cases" class="py-24 bg-white">
+    <section id="cases" class="py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-end mb-12">
                 <div>
@@ -798,7 +1139,7 @@
             <!-- Testimonial Grid -->
             <div class="grid md:grid-cols-3 gap-6">
                 <!-- Case 1 (风景头像) -->
-                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm">
                     <div class="flex gap-1 text-yellow-400 mb-4">★★★★★</div>
                     <p class="text-slate-700 mb-6 italic">"朋友介绍来的，Tim 团队的确非常专业，不仅仅帮忙诊断问题，并且帮我们规划了整个内容策略并高效执行。自然流量和精准询盘在6个月内实现了快速提升。"</p>
                     <div class="flex items-center gap-3">
@@ -811,7 +1152,7 @@
                 </div>
 
                  <!-- Case 2 (卡通宇航员头像) -->
-                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm">
                     <div class="flex gap-1 text-yellow-400 mb-4">★★★★★</div>
                     <p class="text-slate-700 mb-6 italic">"Tim 能把市面上最强的几个 AI 工具进行流程化组合，保质保量完成内容交付，确实帮我们节省了很大一块成本，内部团队也得到的学习"</p>
                     <div class="flex items-center gap-3">
@@ -824,7 +1165,7 @@
                 </div>
 
                  <!-- Case 3 (萌宠猫咪头像) -->
-                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm">
                     <div class="flex gap-1 text-yellow-400 mb-4">★★★★★</div>
                     <p class="text-slate-700 mb-6 italic">"以前最头痛的就是产出内容，公司缺少案例，海外客户不配合反馈，Tim 通过 AI 工具流帮我们解决了案例包装这一痛点，效果非常好。"</p>
                     <div class="flex items-center gap-3">
@@ -1095,11 +1436,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
