@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
 
             <button onclick="handleDiagnosisClick()" class="hidden md:inline-flex px-6 py-2.5 bg-brand hover:bg-brand-600 text-white font-brand font-bold rounded-full transition-all shadow-glow hover:shadow-lg transform hover:-translate-y-0.5 cursor-pointer">
-                预约诊断
+                预约沟通
             </button>
 
             <!-- Mobile Menu Button -->
@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <a href="#" class="text-lg font-medium text-slate-600">价格介绍</a>
 
                 <button onclick="handleDiagnosisClick(); toggleMobileMenu()" class="w-full py-4 bg-brand text-white font-bold rounded-xl text-lg shadow-lg shadow-brand/20 mt-4">
-                    免费预约诊断
+                    预约沟通
                 </button>
             </div>
         </div>
