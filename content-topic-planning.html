@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B2B内容选题策划 | 基于搜索意图的流量增长策略 - HereNow</title>
+    <meta name="description" content="不知道写什么？只会写产品？HereNow 为您构建分层内容策略：从底层的购买旅程问答，到中层的行业百科，再到顶层的热点话题，层层递进，建立权威度，精准捕获B2B询盘。">
+    
+    <!-- 1. Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 2. 主题配置 -->
+    <script src="theme.js"></script>
+    
+    <!-- 3. 自定义样式 -->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* 金字塔堆叠动画 */
+        .pyramid-layer {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: stackUp 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+        @keyframes stackUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 搜索意图匹配动画 */
+        .match-line {
+            stroke-dasharray: 20;
+            animation: dash 1s linear infinite;
+        }
+        @keyframes dash {
+            to { stroke-dashoffset: -40; }
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-500 bg-slate-50 antialiased selection:bg-brand selection:text-white">
+
+    <!-- 导航栏占位 -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section: 痛点唤醒 -->
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-slate-900 text-white">
+        <!-- 背景装饰 -->
+        <div class="absolute inset-0 overflow-hidden opacity-20">
+            <div class="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-brand/20 rounded-full blur-[120px]"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+            <div class="inline-flex items-center px-4 py-2 rounded-full bg-white/10 border border-white/20 text-brand-100 font-bold text-xs uppercase tracking-wider mb-8 backdrop-blur-md">
+                <span class="w-2 h-2 rounded-full bg-brand mr-2"></span>
+                Content Strategy Planning
+            </div>
+            
+            <h1 class="font-brand text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+                别再只盯着“产品”写文章了<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand to-orange-400">客户根本不搜这些词！</span>
+            </h1>
+            
+            <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-10">
+                很多 B2B 企业陷入了“自嗨式”更新的陷阱：只会写产品参数和公司新闻。
+                <br class="hidden md:block">
+                但真实的客户在下单前，会经历<strong>认知、考量、决策</strong>漫长的心理旅程。您的内容覆盖到他们的每一个疑问了吗？
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="document.getElementById('planning-form').scrollIntoView({behavior: 'smooth'})" class="px-8 py-4 bg-brand hover:bg-brand-600 text-white font-brand font-bold rounded-2xl shadow-glow transition-all transform hover:scale-105 cursor-pointer">
+                    预约内容选题规划
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心理念：金字塔模型 -->
+    <section class="py-24 bg-white border-b border-slate-100 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Left: Theory -->
+                <div>
+                    <h2 class="font-brand text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
+                        内容选题金字塔<br>
+                        <span class="text-brand">先建权威，再抢流量</span>
+                    </h2>
+                    <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                        真正科学的内容策略应该像盖房子一样分层。我们反对一上来就追热点，因为没有底层的信任基础，流量来了也接不住。
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-4 p-4 rounded-xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100">
+                            <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center text-red-500 font-bold shrink-0">10%</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">顶层：热点话题 (Newsjacking)</h4>
+                                <p class="text-sm text-slate-500 mt-1">行业展会、政策变动、突发新闻。作用是<strong>短时引流</strong>。</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 p-4 rounded-xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold shrink-0">30%</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">中层：行业百科 (Wiki/Glossary)</h4>
+                                <p class="text-sm text-slate-500 mt-1">名词解释、技术原理、行业标准。作用是<strong>建立 Topical Authority (话题权威度)</strong>，告诉 Google 你是专家。</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 p-4 rounded-xl bg-orange-50 border border-orange-100 transition-colors">
+                            <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold shrink-0">60%</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">底层：购买旅程问答 (Buying Journey)</h4>
+                                <p class="text-sm text-slate-600 mt-1">穷举客户下单前会问的所有问题：选型对比、避坑指南、价格构成。作用是<strong>直接转化询盘</strong>。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Visual Pyramid (Fixed) -->
+                <div class="relative h-[500px] flex flex-col justify-end items-center pb-10">
+                    <!-- Layer 3: Top (No Skew) -->
+                    <div class="pyramid-layer w-32 h-24 relative z-30" style="animation-delay: 0.6s;">
+                        <div class="absolute inset-0 bg-gradient-to-b from-red-400 to-red-600 rounded-t-xl rounded-b-lg shadow-2xl flex items-center justify-center text-white font-bold text-center p-4 border-b-4 border-red-800/20">
+                            <div>
+                                <div class="text-[10px] opacity-80 uppercase mb-1">Traffic</div>
+                                <div class="text-sm">热点话题</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Layer 2: Middle (No Skew) -->
+                    <div class="pyramid-layer w-56 h-28 relative z-20 -mt-2" style="animation-delay: 0.3s;">
+                        <div class="absolute inset-0 bg-gradient-to-b from-blue-500 to-blue-700 rounded-lg shadow-xl flex items-center justify-center text-white font-bold text-center p-4 border-b-4 border-blue-800/20">
+                            <div>
+                                <div class="text-xs opacity-80 uppercase mb-1">Authority</div>
+                                <div class="text-lg">行业百科</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Layer 1: Base (Fixed Color & No Skew) -->
+                    <div class="pyramid-layer w-80 h-32 relative z-10 -mt-2" style="animation-delay: 0s;">
+                        <!-- 使用明确的 orange-500/600 颜色，确保不为白色 -->
+                        <div class="absolute inset-0 bg-gradient-to-b from-orange-500 to-orange-600 rounded-lg shadow-lg flex items-center justify-center text-white font-bold text-center p-4 border-b-8 border-orange-800/30">
+                            <div>
+                                <div class="text-xs opacity-80 uppercase mb-1">Conversion</div>
+                                <div class="text-2xl">购买旅程问答</div>
+                                <div class="text-[10px] bg-white/20 px-3 py-1 rounded-full mt-2 inline-block">核心地基</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Background Glow -->
+                    <div class="absolute bottom-0 w-full h-1/2 bg-orange-100 blur-[100px] -z-10 rounded-full"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 深度解析：底层逻辑 -->
+    <section class="py-24 bg-slate-50 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-brand font-bold tracking-wider text-sm uppercase">The Foundation</span>
+                <h2 class="font-brand text-3xl lg:text-4xl font-bold text-slate-900 mt-2">
+                    为什么我们要先做“底层问答”？
+                </h2>
+                <p class="mt-4 text-slate-500 max-w-2xl mx-auto">
+                    因为这些问题是客户询盘之前必须要扫除的障碍。这部分搜索量可能不大，但极其精准，转化率最高。
+                </p>
+            </div>
+
+            <!-- Customer Journey Map -->
+            <div class="grid md:grid-cols-3 gap-6 relative">
+                <!-- Connecting Arrow (Desktop) -->
+                <div class="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-slate-200 z-0"></div>
+
+                <!-- Stage 1: Awareness -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative z-10 group hover:-translate-y-2 transition-all">
+                    <div class="w-10 h-10 bg-slate-100 text-slate-500 rounded-full flex items-center justify-center font-bold mb-6 border-4 border-white shadow-sm group-hover:bg-brand group-hover:text-white transition-colors">1</div>
+                    <h3 class="font-brand text-xl font-bold text-slate-900 mb-2">意识阶段</h3>
+                    <p class="text-xs text-slate-400 uppercase font-bold mb-4 tracking-wide">我有个问题，怎么解决？</p>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm space-y-2">
+                        <div class="flex gap-2">
+                            <span class="text-red-400">❌</span>
+                            <span class="text-slate-400 line-through">我们的挖掘机最好</span>
+                        </div>
+                        <div class="flex gap-2 font-bold text-slate-700">
+                            <span class="text-green-500">✅</span>
+                            <span>冬天工地无法施工怎么办？</span>
+                        </div>
+                        <div class="flex gap-2 font-bold text-slate-700">
+                            <span class="text-green-500">✅</span>
+                            <span>如何降低工厂照明能耗？</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stage 2: Consideration -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative z-10 group hover:-translate-y-2 transition-all">
+                    <div class="w-10 h-10 bg-slate-100 text-slate-500 rounded-full flex items-center justify-center font-bold mb-6 border-4 border-white shadow-sm group-hover:bg-brand group-hover:text-white transition-colors">2</div>
+                    <h3 class="font-brand text-xl font-bold text-slate-900 mb-2">考量阶段</h3>
+                    <p class="text-xs text-slate-400 uppercase font-bold mb-4 tracking-wide">我知道方案了，选哪个好？</p>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm space-y-2">
+                        <div class="flex gap-2">
+                            <span class="text-red-400">❌</span>
+                            <span class="text-slate-400 line-through">XXX产品参数介绍</span>
+                        </div>
+                        <div class="flex gap-2 font-bold text-slate-700">
+                            <span class="text-green-500">✅</span>
+                            <span>液压挖掘机 vs 电动挖掘机对比</span>
+                        </div>
+                        <div class="flex gap-2 font-bold text-slate-700">
+                            <span class="text-green-500">✅</span>
+                            <span>采购激光切割机的 5 个避坑指南</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stage 3: Decision -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative z-10 group hover:-translate-y-2 transition-all">
+                    <div class="w-10 h-10 bg-slate-100 text-slate-500 rounded-full flex items-center justify-center font-bold mb-6 border-4 border-white shadow-sm group-hover:bg-brand group-hover:text-white transition-colors">3</div>
+                    <h3 class="font-brand text-xl font-bold text-slate-900 mb-2">决策阶段</h3>
+                    <p class="text-xs text-slate-400 uppercase font-bold mb-4 tracking-wide">为什么一定要选你？</p>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm space-y-2">
+                        <div class="flex gap-2">
+                            <span class="text-red-400">❌</span>
+                            <span class="text-slate-400 line-through">欢迎联系我们</span>
+                        </div>
+                        <div class="flex gap-2 font-bold text-slate-700">
+                            <span class="text-green-500">✅</span>
+                            <span>HereNow 品牌客户案例集</span>
+                        </div>
+                        <div class="flex gap-2 font-bold text-slate-700">
+                            <span class="text-green-500">✅</span>
+                            <span>中国挖掘机工厂真实验厂报告</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 权威度与EEAT -->
+    <section class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="inline-block bg-blue-50 text-blue-600 text-xs font-bold px-3 py-1 rounded-full mb-4">Middle Layer Strategy</div>
+                <h2 class="font-brand text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
+                    建立行业百科，<br>成为 Google/AI 眼中的专家
+                </h2>
+                <p class="text-slate-600 mb-6 leading-relaxed">
+                    除了直接卖货，我们还需要构建“中层内容”来支撑网站的权重。通过系统性地解释行业名词、标准和技术原理，建立 <strong>Topical Authority (话题权威度)</strong>。
+                </p>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3">
+                        <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-xs mt-0.5">✓</div>
+                        <div>
+                            <strong class="text-slate-900">覆盖信息类搜索意图：</strong> 捕获大量处于早期调研阶段的潜在客户。
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-xs mt-0.5">✓</div>
+                        <div>
+                            <strong class="text-slate-900">增强 EEAT 信号：</strong> 证明您不仅是卖产品的，更是懂技术的行家。
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-xs mt-0.5">✓</div>
+                        <div>
+                            <strong class="text-slate-900">天然外链磁铁：</strong> 高质量的科普文章更容易获得同行的引用和外链。
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-slate-900 rounded-3xl p-8 relative overflow-hidden text-white shadow-2xl">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-blue-500 rounded-full blur-[80px] opacity-20"></div>
+                
+                <h3 class="font-mono text-sm text-blue-300 mb-4 border-b border-white/10 pb-2">Topic Cluster 示例: [工业照明]</h3>
+                
+                <div class="space-y-4">
+                    <!-- Pillar Page -->
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center text-2xl">🏛️</div>
+                        <div>
+                            <div class="text-xs text-blue-300">Pillar Page (支柱页)</div>
+                            <div class="font-bold">工业照明终极指南 (2026版)</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Cluster Content -->
+                    <div class="pl-6 border-l border-white/20 space-y-4 ml-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                            <div class="text-sm text-slate-300">什么是流明与照度？(Definition)</div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                            <div class="text-sm text-slate-300">LED vs 金卤灯：能耗对比 (Comparison)</div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+                            <div class="text-sm text-slate-300">IP65 vs IP67 防护等级详解 (Technical)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 交付物展示 (Updated) -->
+    <section class="py-20 bg-slate-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 text-center mb-12">
+            <h2 class="font-brand text-3xl font-bold mb-4 text-slate-900">选题规划交付物</h2>
+            <p class="text-slate-500">不仅仅是一个关键词列表，而是一套可执行的内容日历</p>
+        </div>
+        
+        <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-3 gap-6">
+            <!-- 1. 客户购买旅程需求表 -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all">
+                <div class="text-3xl mb-4">🗺️</div>
+                <h3 class="font-bold text-xl mb-2 text-slate-900">客户购买旅程需求表</h3>
+                <p class="text-sm text-slate-500">深入梳理 Awareness/Consideration/Decision 各阶段用户的具体痛点与疑问。</p>
+            </div>
+            
+            <!-- 2. 内容选题分类矩阵 -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all">
+                <div class="text-3xl mb-4">📊</div>
+                <h3 class="font-bold text-xl mb-2 text-slate-900">内容选题分类矩阵</h3>
+                <p class="text-sm text-slate-500">按搜索意图（信息类/交易类）和内容形式（文章/视频/PDF）对选题进行立体化分类。</p>
+            </div>
+
+            <!-- 3. 全年内容选题日历 -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all">
+                <div class="text-3xl mb-4">🗓️</div>
+                <h3 class="font-bold text-xl mb-2 text-slate-900">全年内容选题日历</h3>
+                <p class="text-sm text-slate-500">长达 52 周的发布计划，明确每周的发布主题、关键词布局及预期目标，确保执行力。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom CTA Form -->
+    <section id="planning-form" class="py-24 bg-white relative">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center mb-10">
+                <h2 class="font-brand text-3xl font-bold text-slate-900 mb-2">预约内容选题规划</h2>
+                <p class="text-slate-500">别再用战术上的勤奋掩盖战略上的懒惰，让每一篇内容都有的放矢。</p>
+            </div>
+
+            <form class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-lg space-y-6" onsubmit="submitToGoogleSheet(event, '内容选题规划页表单')">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">您的称呼</label>
+                        <input type="text" name="name" class="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all" placeholder="例如：李经理" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">微信/手机号</label>
+                        <input type="text" name="contact" class="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all" placeholder="方便我们预约沟通" required>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">您的核心产品或行业</label>
+                    <input type="text" name="industry" class="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all" placeholder="例如：工业机器人、注塑模具" required>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">目前内容创作的难点？(选填)</label>
+                    <textarea name="problem" rows="3" class="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all" placeholder="例如：不知道写什么、写了没排名、只有产品页..."></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-4 bg-brand hover:bg-brand-600 text-white font-brand font-bold rounded-xl shadow-lg shadow-brand/30 transition-all transform hover:scale-[1.01] text-lg">
+                    提交申请，获取选题策略建议
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-2xl font-logo text-white">HereNow</div>
+            <div class="text-sm text-center md:text-right">
+                <p>&copy; 2025 HereNowAI.Inc - Marketing. All rights reserved.</p>
+                <div class="mt-2 space-x-4">
+                    <a href="index.html" class="hover:text-white transition-colors">返回首页</a>
+                    <a href="#" class="hover:text-white transition-colors">隐私政策</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 表单提交脚本 -->
+    <script>
+        const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyeM51r1bbsyz3RL5H8I3G8okFwqUZ3VMPXcZsqMU3kddiafRw__V20EgCdgySt6hw4/exec";
+
+        function submitToGoogleSheet(e, formType) {
+            e.preventDefault();
+            const form = e.target;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerText;
+
+            submitBtn.disabled = true;
+            submitBtn.innerText = '提交中...';
+
+            const formData = new FormData(form);
+            const data = new URLSearchParams();
+            data.append('formType', formType);
+            for (const pair of formData) {
+                data.append(pair[0], pair[1]);
+            }
+
+            fetch(GOOGLE_SCRIPT_URL, {
+                method: 'POST',
+                body: data,
+                mode: 'no-cors'
+            })
+            .then(() => {
+                alert('预约成功！我们会尽快帮您梳理内容方向。');
+                form.reset();
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+                alert('提交失败，请稍后重试。');
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerText = originalBtnText;
+            });
+        }
+    </script>
+    
+    <!-- 加载导航栏 -->
+    <script src="navbar.js"></script>
+</body>
+</html>
