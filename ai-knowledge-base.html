@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>企业专属AI知识库搭建 | 打造品牌内容护城河 - HereNow</title>
+    <meta name="description" content="告别千篇一律的AI泛内容。HereNow帮助企业搭建专属AI知识库，喂养品牌资料、产品文档与成功案例，让AI像您的金牌销售一样，产出具有独特品牌灵魂的高质量内容。">
+    
+    <!-- 1. Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 2. 主题配置 -->
+    <script src="theme.js"></script>
+    
+    <!-- 3. 自定义样式 -->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* 神经元脉冲动画 */
+        .neuron-pulse {
+            animation: pulse-glow 3s infinite;
+        }
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 0 0 rgba(255, 107, 61, 0.4); }
+            70% { box-shadow: 0 0 0 20px rgba(255, 107, 61, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 107, 61, 0); }
+        }
+
+        /* 数据流传输动画 (向下流动) */
+        .data-stream-down {
+            stroke-dasharray: 10;
+            animation: flowDown 1.5s linear infinite;
+        }
+        @keyframes flowDown {
+            to { stroke-dashoffset: -20; }
+        }
+
+        /* 浮动文档卡片 - 输入端 (上) */
+        .input-doc {
+            animation: floatInput 4s ease-in-out infinite;
+        }
+        @keyframes floatInput {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+
+        /* 浮动文档卡片 - 输出端 (下) */
+        .output-doc {
+            animation: floatOutput 4s ease-in-out infinite reverse;
+        }
+        @keyframes floatOutput {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(5px); }
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-500 bg-slate-50 antialiased selection:bg-brand selection:text-white">
+
+    <!-- 导航栏占位 -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section: AI 知识库中枢 -->
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-slate-900 text-white">
+        <!-- 背景装饰 -->
+        <div class="absolute inset-0 opacity-20">
+            <svg class="w-full h-full" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+                <circle cx="400" cy="300" r="300" fill="url(#grad1)" fill-opacity="0.1" />
+                <defs>
+                    <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" style="stop-color:rgb(255,107,61);stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:rgb(15,23,42);stop-opacity:0" />
+                    </radialGradient>
+                </defs>
+            </svg>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+            <!-- Text Content -->
+            <div class="text-left order-2 lg:order-1">
+                <div class="inline-flex items-center px-4 py-2 rounded-full bg-white/10 border border-white/20 text-brand-100 font-bold text-xs uppercase tracking-wider mb-8 backdrop-blur-md">
+                    <span class="w-2 h-2 rounded-full bg-brand mr-2 neuron-pulse"></span>
+                    AI Knowledge Base Construction
+                </div>
+                
+                <h1 class="font-brand text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+                    拒绝泛泛而谈，<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand to-orange-400">训练懂你品牌的 AI 大脑</span>
+                </h1>
+                
+                <p class="text-xl text-slate-300 leading-relaxed mb-10">
+                    通用大模型写不出您的差异化优势。我们利用 NotebookLM 等前沿工具，将您的品牌资产植入 AI，构建企业专属知识库，让每一次内容输出都带有独特的品牌灵魂。
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button onclick="document.getElementById('kb-form').scrollIntoView({behavior: 'smooth'})" class="px-8 py-4 bg-brand hover:bg-brand-600 text-white font-brand font-bold rounded-2xl shadow-glow transition-all transform hover:scale-105 cursor-pointer">
+                        立即搭建专属知识库
+                    </button>
+                </div>
+            </div>
+
+            <!-- Visual: Flow Model (Input -> Core -> Output) -->
+            <div class="relative h-[500px] flex items-center justify-center order-1 lg:order-2">
+                <!-- Center Core -->
+                <div class="w-40 h-40 bg-slate-800 border-2 border-brand rounded-full flex flex-col items-center justify-center relative z-20 neuron-pulse shadow-[0_0_60px_rgba(255,107,61,0.4)]">
+                    <div class="text-3xl mb-1">🧠</div>
+                    <div class="text-sm font-bold text-white">AI Knowledge</div>
+                    <div class="text-xs text-brand uppercase tracking-widest font-bold">Base</div>
+                </div>
+
+                <!-- Inputs (Top) -->
+                <div class="absolute top-0 w-full flex justify-center gap-4">
+                    <div class="bg-white/10 backdrop-blur border border-white/20 px-3 py-2 rounded-lg flex items-center gap-2 input-doc text-xs shadow-lg" style="animation-delay: 0s; transform: translateY(-20px) translateX(-60px);">
+                        <span>📖</span> 品牌故事
+                    </div>
+                    <div class="bg-white/10 backdrop-blur border border-white/20 px-3 py-2 rounded-lg flex items-center gap-2 input-doc text-xs shadow-lg" style="animation-delay: 0.5s; transform: translateY(-40px) translateX(-20px);">
+                        <span>📄</span> 产品手册
+                    </div>
+                    <div class="bg-white/10 backdrop-blur border border-white/20 px-3 py-2 rounded-lg flex items-center gap-2 input-doc text-xs shadow-lg" style="animation-delay: 1s; transform: translateY(-20px) translateX(20px);">
+                        <span>🏆</span> 客户案例
+                    </div>
+                    <div class="bg-white/10 backdrop-blur border border-white/20 px-3 py-2 rounded-lg flex items-center gap-2 input-doc text-xs shadow-lg" style="animation-delay: 1.5s; transform: translateY(-40px) translateX(60px);">
+                        <span>🛠️</span> 售后文档
+                    </div>
+                </div>
+
+                <!-- Outputs (Bottom) -->
+                <div class="absolute bottom-0 w-full flex justify-center gap-6">
+                    <div class="bg-brand/20 backdrop-blur border border-brand/40 px-4 py-3 rounded-xl flex flex-col items-center gap-1 output-doc text-center min-w-[100px]" style="animation-delay: 0s; transform: translateY(20px);">
+                        <span class="text-xl">✍️</span>
+                        <span class="text-xs font-bold text-white">博客内容</span>
+                    </div>
+                    <div class="bg-brand/20 backdrop-blur border border-brand/40 px-4 py-3 rounded-xl flex flex-col items-center gap-1 output-doc text-center min-w-[100px]" style="animation-delay: 0.5s; transform: translateY(40px);">
+                        <span class="text-xl">📱</span>
+                        <span class="text-xs font-bold text-white">社媒发帖</span>
+                    </div>
+                    <div class="bg-brand/20 backdrop-blur border border-brand/40 px-4 py-3 rounded-xl flex flex-col items-center gap-1 output-doc text-center min-w-[100px]" style="animation-delay: 1s; transform: translateY(20px);">
+                        <span class="text-xl">🎬</span>
+                        <span class="text-xs font-bold text-white">短视频脚本</span>
+                    </div>
+                </div>
+
+                <!-- Flow Lines (SVG) -->
+                <svg class="absolute inset-0 w-full h-full -z-10 pointer-events-none">
+                    <!-- Input Streams (Merging to Center) -->
+                    <path d="M130 50 Q 200 150 250 200" stroke="url(#lineGradInput)" stroke-width="2" fill="none" class="data-stream-down" />
+                    <path d="M200 30 Q 250 120 250 200" stroke="url(#lineGradInput)" stroke-width="2" fill="none" class="data-stream-down" />
+                    <path d="M300 30 Q 250 120 250 200" stroke="url(#lineGradInput)" stroke-width="2" fill="none" class="data-stream-down" />
+                    <path d="M370 50 Q 300 150 250 200" stroke="url(#lineGradInput)" stroke-width="2" fill="none" class="data-stream-down" />
+
+                    <!-- Output Streams (Diverging from Center) -->
+                    <path d="M250 300 Q 200 380 150 420" stroke="url(#lineGradOutput)" stroke-width="3" fill="none" class="data-stream-down" />
+                    <path d="M250 300 Q 250 380 250 440" stroke="url(#lineGradOutput)" stroke-width="3" fill="none" class="data-stream-down" />
+                    <path d="M250 300 Q 300 380 350 420" stroke="url(#lineGradOutput)" stroke-width="3" fill="none" class="data-stream-down" />
+
+                    <defs>
+                        <linearGradient id="lineGradInput" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.1" />
+                            <stop offset="100%" stop-color="#FF6B3D" stop-opacity="1" />
+                        </linearGradient>
+                        <linearGradient id="lineGradOutput" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#FF6B3D" stop-opacity="1" />
+                            <stop offset="100%" stop-color="#FF6B3D" stop-opacity="0.1" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- 痛点：Entity的重要性 -->
+    <section class="py-20 bg-white border-b border-slate-100">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h2 class="font-brand text-2xl md:text-3xl font-bold text-slate-900 mb-6">
+                为什么直接用 ChatGPT 写的内容<br>
+                <span class="text-red-500 decoration-4 decoration-red-100 underline-offset-4 underline">没有排名，也没有转化？</span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8 mt-12 text-left">
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100">
+                    <h3 class="font-bold text-xl text-slate-800 mb-3 flex items-center gap-2">
+                        <span class="text-2xl">🚫</span> 缺乏 Entity (实体) 认知
+                    </h3>
+                    <p class="text-slate-600">通用模型也是用公网数据训练的，它只知道“挖掘机是什么”，但不知道“<strong>您的挖掘机</strong>比别人省油 20%”。导致产出的内容千篇一律，无法建立品牌权威性。</p>
+                </div>
+                <div class="bg-brand-50/50 p-8 rounded-3xl border border-brand/10">
+                    <h3 class="font-bold text-xl text-brand mb-3 flex items-center gap-2">
+                        <span class="text-2xl">✅</span> 建立品牌知识图谱
+                    </h3>
+                    <p class="text-slate-700">通过喂养私有数据，我们让 AI 理解您的品牌历史、技术参数和独特卖点。Google 现在极度看重 EEAT，只有独特的、有深度的内容才能获得高排名。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 解决方案：搭建流程 -->
+    <section class="py-24 bg-slate-50 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-brand font-bold tracking-wider text-sm uppercase">Workflow</span>
+                <h2 class="font-brand text-3xl lg:text-4xl font-bold text-slate-900 mt-2">
+                    从文档到资产的<br>AI 炼金术
+                </h2>
+            </div>
+
+            <div class="relative">
+                <!-- 连接线 (Desktop) -->
+                <div class="hidden lg:block absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-slate-200 via-brand/50 to-slate-200 -translate-y-1/2 z-0"></div>
+
+                <div class="grid lg:grid-cols-4 gap-6 relative z-10">
+                    
+                    <!-- Step 1: 采集 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 group hover:-translate-y-2 transition-all duration-300">
+                        <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center text-3xl mb-6 border-4 border-white shadow-md mx-auto group-hover:bg-brand group-hover:text-white transition-colors">📥</div>
+                        <h3 class="font-brand text-xl font-bold text-slate-900 text-center mb-2">全资料采集</h3>
+                        <p class="text-sm text-slate-500 text-center">
+                            收集品牌手册、产品规格书、销售话术、客户问答 QA、历史优质文章等所有非结构化数据。
+                        </p>
+                    </div>
+
+                    <!-- Step 2: 处理 (Updated) -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 group hover:-translate-y-2 transition-all duration-300">
+                        <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center text-3xl mb-6 border-4 border-white shadow-md mx-auto group-hover:bg-brand group-hover:text-white transition-colors">⚡</div>
+                        <h3 class="font-brand text-xl font-bold text-slate-900 text-center mb-2">前沿 AI 工具训练</h3>
+                        <p class="text-sm text-slate-500 text-center">
+                            利用 NotebookLM 等最新 AI 知识库工具，快速解析海量文档，提取核心论点与数据，构建高可用的私有知识索引。
+                        </p>
+                    </div>
+
+                    <!-- Step 3: 微调 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 group hover:-translate-y-2 transition-all duration-300">
+                        <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center text-3xl mb-6 border-4 border-white shadow-md mx-auto group-hover:bg-brand group-hover:text-white transition-colors">🧠</div>
+                        <h3 class="font-brand text-xl font-bold text-slate-900 text-center mb-2">Prompt 工程微调</h3>
+                        <p class="text-sm text-slate-500 text-center">
+                            设计专属提示词 (System Prompt)，定义 AI 的角色、语气 (Tone of Voice) 及业务逻辑约束。
+                        </p>
+                    </div>
+
+                    <!-- Step 4: 输出 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 group hover:-translate-y-2 transition-all duration-300">
+                        <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center text-3xl mb-6 border-4 border-white shadow-md mx-auto group-hover:bg-brand group-hover:text-white transition-colors">💎</div>
+                        <h3 class="font-brand text-xl font-bold text-slate-900 text-center mb-2">差异化内容输出</h3>
+                        <p class="text-sm text-slate-500 text-center">
+                            生成带有品牌观点的博客、符合逻辑的社媒贴文及专业的视频脚本，且永不出现幻觉。
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 应用场景 (Updated) -->
+    <section class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="font-brand text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
+                        一个知识库，<br>赋能全渠道营销
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 shrink-0 text-xl">🌐</div>
+                            <div>
+                                <h4 class="font-bold text-lg text-slate-800">网站落地页 & 博客文案</h4>
+                                <p class="text-sm text-slate-500 mt-1">批量生成符合 EEAT 标准的深度技术文章、应用案例和 Pillar Page，确保专业度。</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center text-purple-600 shrink-0 text-xl">📱</div>
+                            <div>
+                                <h4 class="font-bold text-lg text-slate-800">社媒图文创作</h4>
+                                <p class="text-sm text-slate-500 mt-1">将一篇技术白皮书自动裂变为 10 篇 LinkedIn 贴文，并自动匹配配图建议。</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center text-red-600 shrink-0 text-xl">🎬</div>
+                            <div>
+                                <h4 class="font-bold text-lg text-slate-800">短视频脚本输出</h4>
+                                <p class="text-sm text-slate-500 mt-1">基于产品卖点，一键生成 YouTube Shorts 或 TikTok 的分镜脚本与口播文案。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mockup: Content Generation Interface -->
+                <div class="bg-slate-900 rounded-3xl p-6 shadow-2xl relative overflow-hidden border border-slate-700">
+                    <div class="absolute top-0 left-0 w-full h-12 bg-slate-800 flex items-center px-4 gap-2">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        <span class="ml-4 text-xs text-slate-400">HereNow AI Generator</span>
+                    </div>
+                    <div class="mt-8 space-y-4 font-mono text-sm">
+                        <!-- User Msg -->
+                        <div class="flex justify-end">
+                            <div class="bg-brand text-white px-4 py-2 rounded-2xl rounded-tr-none max-w-[90%]">
+                                根据 [产品手册V2.pdf]，为新款 X-2000 挖掘机写一个 60秒 的 YouTube Shorts 脚本，强调极寒启动优势。
+                            </div>
+                        </div>
+                        <!-- AI Thinking -->
+                        <div class="flex items-center gap-2 text-xs text-slate-500 pl-2">
+                            <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                            读取知识库: [产品手册V2.pdf] P.12 (WarmStart技术)...
+                        </div>
+                        <!-- AI Msg -->
+                        <div class="flex justify-start">
+                            <div class="bg-slate-800 text-slate-300 px-4 py-3 rounded-2xl rounded-tl-none max-w-[95%] border border-slate-700 h-64 overflow-y-auto custom-scrollbar">
+                                <p class="text-brand font-bold mb-2">🎬 视频标题：零下40度？X-2000 一键启动！</p>
+                                
+                                <div class="space-y-3 text-xs">
+                                    <div class="grid grid-cols-4 gap-2 border-b border-slate-700 pb-2">
+                                        <div class="col-span-1 text-slate-500">0:00-0:05</div>
+                                        <div class="col-span-3">
+                                            <span class="text-blue-400">[画面]</span> 冰天雪地的西伯利亚工地，一台普通挖掘机打不着火，司机焦急。<br>
+                                            <span class="text-green-400">[旁白]</span> "还在为冬天停工烦恼吗？"
+                                        </div>
+                                    </div>
+                                    <div class="grid grid-cols-4 gap-2 border-b border-slate-700 pb-2">
+                                        <div class="col-span-1 text-slate-500">0:05-0:15</div>
+                                        <div class="col-span-3">
+                                            <span class="text-blue-400">[画面]</span> 切换到 X-2000 特写，按下启动键，引擎轰鸣声。<br>
+                                            <span class="text-green-400">[旁白]</span> "HereNow X-2000，搭载独家 WarmStart™ 预热系统..."
+                                        </div>
+                                    </div>
+                                    <div class="grid grid-cols-4 gap-2">
+                                        <div class="col-span-1 text-slate-500">0:15-0:30</div>
+                                        <div class="col-span-3">
+                                            <span class="text-blue-400">[画面]</span> 挖掘机强力破冰画面，显示数据：启动速度提升 300%。<br>
+                                            <span class="text-green-400">[旁白]</span> "无惧严寒，效率拉满！点击下方链接预约试驾。"
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom CTA Form -->
+    <section id="kb-form" class="py-24 bg-white relative">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center mb-10">
+                <h2 class="font-brand text-3xl font-bold text-slate-900 mb-2">准备好搭建专属企业 AI 知识库了吗？</h2>
+                <p class="text-slate-500">这是一次品牌资产的数字化升级，越早建立，护城河越深。</p>
+            </div>
+
+            <form class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-lg space-y-6" onsubmit="submitToGoogleSheet(event, 'AI知识库搭建页表单')">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">您的称呼</label>
+                        <input type="text" name="name" class="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all" placeholder="例如：张总" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">微信/手机号</label>
+                        <input type="text" name="contact" class="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all" placeholder="方便我们发送演示Demo" required>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">您现有的资料情况？(多选)</label>
+                    <div class="grid grid-cols-2 gap-2 text-sm text-slate-600">
+                        <label class="flex items-center gap-2"><input type="checkbox" name="assets" value="产品手册"> 产品手册/规格书</label>
+                        <label class="flex items-center gap-2"><input type="checkbox" name="assets" value="网站文章"> 现有网站文章</label>
+                        <label class="flex items-center gap-2"><input type="checkbox" name="assets" value="客户案例"> 客户案例/Testimonials</label>
+                        <label class="flex items-center gap-2"><input type="checkbox" name="assets" value="销售话术"> 销售培训文档/Q&A</label>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">您希望 AI 主要帮您解决什么？</label>
+                    <textarea name="goal" rows="3" class="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all" placeholder="例如：写博客太慢、社媒内容没灵感、视频脚本写不出..."></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-4 bg-brand hover:bg-brand-600 text-white font-brand font-bold rounded-xl shadow-lg shadow-brand/30 transition-all transform hover:scale-[1.01] text-lg">
+                    提交申请，预约 Demo 演示
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-2xl font-logo text-white">HereNow</div>
+            <div class="text-sm text-center md:text-right">
+                <p>&copy; 2025 HereNowAI.Inc - Marketing. All rights reserved.</p>
+                <div class="mt-2 space-x-4">
+                    <a href="index.html" class="hover:text-white transition-colors">返回首页</a>
+                    <a href="#" class="hover:text-white transition-colors">隐私政策</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 表单提交脚本 -->
+    <script>
+        const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyeM51r1bbsyz3RL5H8I3G8okFwqUZ3VMPXcZsqMU3kddiafRw__V20EgCdgySt6hw4/exec";
+
+        function submitToGoogleSheet(e, formType) {
+            e.preventDefault();
+            const form = e.target;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerText;
+
+            submitBtn.disabled = true;
+            submitBtn.innerText = '正在连接AI模型...';
+
+            const formData = new FormData(form);
+            const data = new URLSearchParams();
+            data.append('formType', formType);
+            
+            // 处理 Checkbox 多选
+            const assets = [];
+            form.querySelectorAll('input[name="assets"]:checked').forEach(checkbox => {
+                assets.push(checkbox.value);
+            });
+            data.append('assets', assets.join(', '));
+
+            for (const pair of formData) {
+                if (pair[0] !== 'assets') {
+                    data.append(pair[0], pair[1]);
+                }
+            }
+
+            fetch(GOOGLE_SCRIPT_URL, {
+                method: 'POST',
+                body: data,
+                mode: 'no-cors'
+            })
+            .then(() => {
+                alert('申请已接收！Tim 将在 24 小时内联系您演示 AI 知识库 Demo。');
+                form.reset();
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+                alert('提交失败，请稍后重试。');
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerText = originalBtnText;
+            });
+        }
+    </script>
+    
+    <!-- 加载导航栏 -->
+    <script src="navbar.js"></script>
+</body>
+</html>

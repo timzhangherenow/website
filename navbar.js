@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 </div>
                                 <p class="text-xs text-slate-400">定制化的增长路径图</p>
                             </a>
-                            <a href="#" class="block px-4 py-3 hover:bg-slate-50 rounded-xl transition-all group/item">
+                            <a href="ai-knowledge-base.html" class="block px-4 py-3 hover:bg-slate-50 rounded-xl transition-all group/item">
                                 <div class="font-bold text-slate-800 group-hover/item:text-brand mb-0.5 flex items-center gap-2">
                                     <span class="w-1.5 h-1.5 rounded-full bg-brand"></span> AI知识库搭建
                                 </div>
@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="pl-4 space-y-3 border-l-2 border-slate-100">
                         <a href="website-health-check.html" class="block text-brand font-medium" onclick="toggleMobileMenu()">网站问题诊断</a>
                         <a href="website-strategy-planning.html" class="block text-slate-600" onclick="toggleMobileMenu()">网站策略规划</a>
-                        <a href="#" class="block text-slate-600">AI知识库搭建</a>
+                        <a href="ai-knowledge-base.html" class="block text-slate-600" onclick="toggleMobileMenu()">AI知识库搭建</a>
                         <a href="#" class="block text-slate-600">优质选题策划</a>
                     </div>
                 </div>
