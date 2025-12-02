@@ -226,13 +226,77 @@
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <a href="#" class="text-3xl font-logo text-brand tracking-wide">HereNow</a>
             
-            <div class="hidden md:flex space-x-8 items-center font-medium text-sm text-slate-600">
-                <a href="#about" class="hover:text-brand transition-colors">关于我们</a>
-                <a href="#value-mismatch" class="hover:text-brand transition-colors">价值重构</a>
-                <a href="#problems" class="hover:text-brand transition-colors">行业痛点</a>
-                <a href="#services" class="hover:text-brand transition-colors">服务体系</a>
-                <a href="#process" class="hover:text-brand transition-colors">合作流程</a>
-                <a href="#cases" class="hover:text-brand transition-colors">客户口碑</a>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-2 items-center font-medium text-sm text-slate-600">
+                
+                <!-- 1. 关于我们 (Home) -->
+                <a href="#" class="px-4 py-2 hover:text-brand transition-colors">关于我们</a>
+
+                <!-- 2. 专业服务 (Dropdown) -->
+                <div class="relative group">
+                    <button class="px-4 py-2 hover:text-brand transition-colors flex items-center gap-1 focus:outline-none">
+                        专业服务
+                        <svg class="w-3 h-3 text-slate-400 group-hover:text-brand transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <!-- Dropdown Menu -->
+                    <div class="absolute left-0 top-full pt-4 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
+                        <div class="bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden py-2">
+                            <a href="#" class="block px-5 py-3 hover:bg-slate-50 hover:text-brand text-slate-600 transition-colors flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand/40"></span> 网站问题诊断
+                            </a>
+                            <a href="#" class="block px-5 py-3 hover:bg-slate-50 hover:text-brand text-slate-600 transition-colors flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand/40"></span> 网站策略规划
+                            </a>
+                            <a href="#" class="block px-5 py-3 hover:bg-slate-50 hover:text-brand text-slate-600 transition-colors flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand/40"></span> AI知识库搭建
+                            </a>
+                            <a href="#" class="block px-5 py-3 hover:bg-slate-50 hover:text-brand text-slate-600 transition-colors flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand/40"></span> 优质选题策划
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. 运营方案 (Dropdown) -->
+                <div class="relative group">
+                    <button class="px-4 py-2 hover:text-brand transition-colors flex items-center gap-1 focus:outline-none">
+                        运营方案
+                        <svg class="w-3 h-3 text-slate-400 group-hover:text-brand transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <!-- Dropdown Menu -->
+                    <div class="absolute left-0 top-full pt-4 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
+                        <div class="bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden py-2">
+                            <a href="#" class="block px-5 py-3 hover:bg-slate-50 hover:text-brand text-slate-600 transition-colors flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-blue-400/40"></span> 博客代运营
+                            </a>
+                            <a href="#" class="block px-5 py-3 hover:bg-slate-50 hover:text-brand text-slate-600 transition-colors flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-blue-600/40"></span> LinkedIn代运营
+                            </a>
+                            <a href="#" class="block px-5 py-3 hover:bg-slate-50 hover:text-brand text-slate-600 transition-colors flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-red-500/40"></span> YouTube代运营
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. 资源中心 (Dropdown) -->
+                <div class="relative group">
+                    <button class="px-4 py-2 hover:text-brand transition-colors flex items-center gap-1 focus:outline-none">
+                        资源中心
+                        <svg class="w-3 h-3 text-slate-400 group-hover:text-brand transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <!-- Dropdown Menu -->
+                    <div class="absolute left-0 top-full pt-4 w-40 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
+                        <div class="bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden py-2">
+                            <a href="#" class="block px-5 py-3 hover:bg-slate-50 hover:text-brand text-slate-600 transition-colors">博客</a>
+                            <a href="#" class="block px-5 py-3 hover:bg-slate-50 hover:text-brand text-slate-600 transition-colors">客户案例</a>
+                            <a href="#" class="block px-5 py-3 hover:bg-slate-50 hover:text-brand text-slate-600 transition-colors">课程学习</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. 价格介绍 -->
+                <a href="#" class="px-4 py-2 hover:text-brand transition-colors">价格介绍</a>
             </div>
 
             <button onclick="openDiagnosisModal()" class="hidden md:inline-flex px-6 py-2.5 bg-brand hover:bg-brand-600 text-white font-brand font-bold rounded-full transition-all shadow-glow hover:shadow-lg transform hover:-translate-y-0.5 cursor-pointer">
@@ -351,7 +415,7 @@
                     <span class="text-brand">您本该是流量主，而非广告主</span>
                 </h2>
                 <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-                    中国出海企业拥有世界级的制造工艺、技术方案与成功案例。这些宝贵的资产，本应是吸引海外买家主动学习的流量源。却因不会包装内容，不懂SEO技术与规则，网站变成了无人问津的孤岛。不断花钱买“吆喝”，ROI难以保障。
+                    中国出海企业拥有世界级的制造工艺、技术方案与成功案例。这些宝贵的资产，本应是吸引海外买家主动学习的流量源。却因不会包装内容，不懂SEO技术与规则，网站变成了无人问津的孤岛。不断花钱买“吆喝”，转化率难以保障。
                 </p>
             </div>
 
@@ -451,6 +515,19 @@
                     <svg class="w-8 h-8 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Core Philosophy (核心理念) -->
+    <section class="py-20 bg-white border-b border-slate-100">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <div class="mb-6">
+                <span class="text-brand font-bold tracking-wider text-sm uppercase">Core Philosophy</span>
+            </div>
+            <h2 class="font-brand text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 leading-relaxed max-w-4xl mx-auto">
+                无论 SEO 还是 GEO，或者是社媒，<br class="hidden md:block">
+                无论客户在哪个渠道搜索，<span class="text-brand decoration-4 decoration-brand/20 underline-offset-4 underline">优质内容</span> 是永远的答案。
+            </h2>
         </div>
     </section>
 
@@ -924,13 +1001,13 @@
                 <!-- Q3 -->
                 <details class="group bg-white rounded-2xl shadow-sm border border-slate-100 open:ring-1 open:ring-brand/20 transition-all">
                     <summary class="flex items-center justify-between p-6 cursor-pointer font-bold text-lg text-slate-800 hover:text-brand transition-colors">
-                        <span>我们行业非常垂直冷门，有足够多话题可以写吗？</span>
+                        <span>我们行业非常垂直冷门，AI能写出专业内容吗？</span>
                         <span class="transform group-open:rotate-180 transition-transform text-brand">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </span>
                     </summary>
                     <div class="px-6 pb-6 text-slate-600 leading-relaxed">
-                        越细分垂直的领域越需要专业的内容输出。我们会基于您海外不同行业区域等细分画像的目标客群，深度分析行业需求与采购旅程，进行深度话题拓展。同时我们会利用您的产品手册、白皮书搭建专属“AI 知识库(AI Knowledge Base)”，并结合专家经验进行 Prompt 工程微调。所有内容生产均有知识库进行 Fact Check 和润色，确保内容既符合 Google 算法喜好，又具备行业深度。
+                        这正是我们的核心优势。我们不直接使用通用 AI 生成内容。我们会先利用您的产品手册、白皮书搭建专属“知识库(Knowledge Base)”，并结合专家经验进行 Prompt 工程微调。所有内容产出后，均会有具备行业经验的编辑进行 Fact Check 和润色，确保内容既符合 Google 算法喜好，又具备行业深度。
                     </div>
                 </details>
 
@@ -1436,5 +1513,3 @@
 
 </body>
 </html>
-
-
