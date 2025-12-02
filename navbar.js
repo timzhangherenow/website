@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
             <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-1 items-center font-medium text-sm text-slate-600">
                 
-                <!-- 1. 关于我们 -->
-                <a href="${getLink('#about')}" class="px-4 py-2 hover:text-brand transition-colors rounded-lg hover:bg-slate-50">关于我们</a>
+                <!-- 1. 首页 -->
+                <a href="${getLink('#about')}" class="px-4 py-2 hover:text-brand transition-colors rounded-lg hover:bg-slate-50">首页</a>
 
                 <!-- 2. 专业服务 (Dropdown) -->
                 <div class="relative group">
