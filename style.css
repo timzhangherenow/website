@@ -1,0 +1,91 @@
+/* style.css - 核心样式表 */
+
+/* 1. 引入 Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Lalezar&display=swap');
+
+/* 2. 字体定义 */
+.font-brand { font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: -0.02em; }
+.font-logo { font-family: 'Lalezar', system-ui; }
+.font-sans { font-family: 'Inter', sans-serif; }
+
+/* 3. 自定义颜色变量 (备用) */
+:root {
+    --brand-orange: #FF6B3D;
+}
+
+/* 4. 弥散光背景动画 */
+.blob-bg {
+    position: absolute;
+    filter: blur(80px);
+    z-index: -1;
+    opacity: 0.6;
+}
+
+/* 5. 毛玻璃卡片通用样式 */
+.glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 20px 40px -10px rgba(255, 107, 61, 0.1);
+}
+
+/* 6. 橙色弥散投影 */
+.shadow-glow {
+    box-shadow: 0 20px 60px -15px rgba(255, 107, 61, 0.25);
+}
+
+/* 7. Logo 悬浮特效 */
+.tech-logo {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: grayscale(10%); 
+    overflow: hidden; 
+    background-color: white; 
+}
+.tech-logo:hover {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* 8. 模态框动画 (Modal) */
+.modal {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+}
+.modal.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+.modal-content {
+    transform: scale(0.95);
+    transition: transform 0.3s ease-in-out;
+}
+.modal.active .modal-content {
+    transform: scale(1);
+}
+
+/* 9. 隐藏滚动条 (Carousel) */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* 10. FAQ 折叠面板动画 */
+details > summary {
+    list-style: none;
+}
+details > summary::-webkit-details-marker {
+    display: none;
+}
+details[open] summary ~ * {
+    animation: sweep .3s ease-in-out;
+}
+@keyframes sweep {
+    0%    {opacity: 0; transform: translateY(-10px)}
+    100%  {opacity: 1; transform: translateY(0)}
+}
