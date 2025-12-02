@@ -1,12 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // 1. 获取占位符元素
   const navbarPlaceholder = document.getElementById("navbar-placeholder");
-
-  if (!navbarPlaceholder) {
-      console.error("Error: 找不到 id='navbar-placeholder' 的元素，导航栏无法加载。");
-      return;
-  }
-
   // 2. 路径判断工具
   const path = window.location.pathname;
   const isHomePage = path === "/" || path.endsWith("/index.html") || path.endsWith("/");
@@ -42,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 </div>
                                 <p class="text-xs text-slate-400">找出流量流失的根本原因</p>
                             </a>
-                            <a href="#" class="block px-4 py-3 hover:bg-slate-50 rounded-xl transition-all group/item">
+                            <a href="website-strategy-planning.html" class="block px-4 py-3 hover:bg-slate-50 rounded-xl transition-all group/item">
                                 <div class="font-bold text-slate-800 group-hover/item:text-brand mb-0.5 flex items-center gap-2">
                                     <span class="w-1.5 h-1.5 rounded-full bg-brand"></span> 网站策略规划
                                 </div>
@@ -147,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="font-bold text-slate-900">专业服务</div>
                     <div class="pl-4 space-y-3 border-l-2 border-slate-100">
                         <a href="website-health-check.html" class="block text-brand font-medium" onclick="toggleMobileMenu()">网站问题诊断</a>
-                        <a href="#" class="block text-slate-600">网站策略规划</a>
+                        <a href="website-strategy-planning.html" class="block text-slate-600" onclick="toggleMobileMenu()">网站策略规划</a>
                         <a href="#" class="block text-slate-600">AI知识库搭建</a>
                         <a href="#" class="block text-slate-600">优质选题策划</a>
                     </div>
