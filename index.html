@@ -3,23 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 基础 SEO 设置 -->
     <title>HereNow营销咨询 | AI赋能 B2B出海内容营销服务 - SEO/GEO专家外挂</title>
     <meta name="description" content="HereNow营销咨询提供AI赋能的B2B出海内容营销服务。结合资深SEO专家策略与AI高效执行，为出海企业提供SEO/GEO代运营、社媒运营及营销策略定制。按月付费，过程可管理，效果有保障，打造您的海外流量增长引擎。">
     <meta name="author" content="Tim Zhang, HereNow">
     <meta name="robots" content="index, follow">
     
+    <!-- Open Graph / Facebook / 微信分享优化 -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://herenow.services/">
     <meta property="og:title" content="HereNow | AI赋能 B2B出海内容营销服务">
     <meta property="og:description" content="拒绝无效投入，用基础员工成本获得资深营销合伙人。SEO/GEO/社媒全链路闭环，助力中国B2B企业出海增长。">
     <meta property="og:image" content="https://herenow.services/images/share-card.png"> 
     
+    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://herenow.services/">
     <meta property="twitter:title" content="HereNow | AI赋能 B2B出海内容营销服务">
     <meta property="twitter:description" content="拒绝无效投入，用基础员工成本获得资深营销合伙人。SEO/GEO/社媒全链路闭环，助力中国B2B企业出海增长。">
     <meta property="twitter:image" content="https://herenow.services/images/share-card.png">
     
+    <!-- 移动端视口设置 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Schema.org Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -94,21 +100,218 @@
     }
     </script>
     
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <script src="theme.js"></script>
+    <!-- Google Fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Lalezar&display=swap');
+        
+        .font-brand { font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: -0.02em; }
+        .font-logo { font-family: 'Lalezar', system-ui; }
+        .font-sans { font-family: 'Inter', sans-serif; }
+        
+        /* 自定义颜色配置 */
+        :root {
+            --brand-orange: #FF6B3D;
+        }
+
+        /* 弥散光背景动画 */
+        .blob-bg {
+            position: absolute;
+            filter: blur(80px);
+            z-index: -1;
+            opacity: 0.6;
+        }
+        
+        /* 毛玻璃卡片通用样式 */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 20px 40px -10px rgba(255, 107, 61, 0.1);
+        }
+
+        /* 橙色弥散投影 */
+        .shadow-glow {
+            box-shadow: 0 20px 60px -15px rgba(255, 107, 61, 0.25);
+        }
+
+        /* Logo 悬浮特效 */
+        .tech-logo {
+            transition: transform 0.3s ease, filter 0.3s ease;
+            filter: grayscale(10%); 
+            overflow: hidden; 
+            background-color: white; 
+        }
+        .tech-logo:hover {
+            transform: scale(1.05);
+            filter: grayscale(0%);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        /* Modal Animation */
+        .modal {
+            transition: opacity 0.3s ease-in-out;
+            opacity: 0;
+            pointer-events: none;
+        }
+        .modal.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .modal-content {
+            transform: scale(0.95);
+            transition: transform 0.3s ease-in-out;
+        }
+        .modal.active .modal-content {
+            transform: scale(1);
+        }
+
+        /* Hide scrollbar for carousel */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+
+        /* FAQ Accordion Transition */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary ~ * {
+            animation: sweep .3s ease-in-out;
+        }
+        @keyframes sweep {
+            0%    {opacity: 0; transform: translateY(-10px)}
+            100%  {opacity: 1; transform: translateY(0)}
+        }
+    </style>
     
-    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            DEFAULT: '#FF6B3D',
+                            50: '#FFF0EB',
+                            100: '#FFDEC9',
+                            600: '#E04F23'
+                        },
+                        slate: {
+                            900: '#0F172A', // 午夜蓝
+                            500: '#64748B', // 冷灰
+                        }
+                    },
+                    borderRadius: {
+                        '3xl': '1.5rem',
+                        '4xl': '2rem',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 <body class="font-sans text-slate-500 bg-slate-50 antialiased selection:bg-brand selection:text-white">
 
-    <div id="navbar-placeholder"></div>
+    <!-- 顶部导航 -->
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-white/50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-3xl font-logo text-brand tracking-wide">HereNow</a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-2 items-center font-medium text-sm text-slate-600">
+                
+                <!-- 1. 关于我们 (Home) -->
+                <a href="#" class="px-4 py-2 hover:text-brand transition-colors">关于我们</a>
 
+                <!-- 2. 专业服务 (Dropdown) -->
+                <div class="relative group">
+                    <button class="px-4 py-2 hover:text-brand transition-colors flex items-center gap-1 focus:outline-none">
+                        专业服务
+                        <svg class="w-3 h-3 text-slate-400 group-hover:text-brand transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <!-- Dropdown Menu -->
+                    <div class="absolute left-0 top-full pt-4 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
+                        <div class="bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden py-2">
+                            <a href="#" class="block px-5 py-3 hover:bg-slate-50 hover:text-brand text-slate-600 transition-colors flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand/40"></span> 网站问题诊断
+                            </a>
+                            <a href="#" class="block px-5 py-3 hover:bg-slate-50 hover:text-brand text-slate-600 transition-colors flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand/40"></span> 网站策略规划
+                            </a>
+                            <a href="#" class="block px-5 py-3 hover:bg-slate-50 hover:text-brand text-slate-600 transition-colors flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand/40"></span> AI知识库搭建
+                            </a>
+                            <a href="#" class="block px-5 py-3 hover:bg-slate-50 hover:text-brand text-slate-600 transition-colors flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand/40"></span> 优质选题策划
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. 运营方案 (Dropdown) -->
+                <div class="relative group">
+                    <button class="px-4 py-2 hover:text-brand transition-colors flex items-center gap-1 focus:outline-none">
+                        运营方案
+                        <svg class="w-3 h-3 text-slate-400 group-hover:text-brand transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <!-- Dropdown Menu -->
+                    <div class="absolute left-0 top-full pt-4 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
+                        <div class="bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden py-2">
+                            <a href="#" class="block px-5 py-3 hover:bg-slate-50 hover:text-brand text-slate-600 transition-colors flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-blue-400/40"></span> 博客代运营
+                            </a>
+                            <a href="#" class="block px-5 py-3 hover:bg-slate-50 hover:text-brand text-slate-600 transition-colors flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-blue-600/40"></span> LinkedIn代运营
+                            </a>
+                            <a href="#" class="block px-5 py-3 hover:bg-slate-50 hover:text-brand text-slate-600 transition-colors flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-red-500/40"></span> YouTube代运营
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. 资源中心 (Dropdown) -->
+                <div class="relative group">
+                    <button class="px-4 py-2 hover:text-brand transition-colors flex items-center gap-1 focus:outline-none">
+                        资源中心
+                        <svg class="w-3 h-3 text-slate-400 group-hover:text-brand transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <!-- Dropdown Menu -->
+                    <div class="absolute left-0 top-full pt-4 w-40 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
+                        <div class="bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden py-2">
+                            <a href="#" class="block px-5 py-3 hover:bg-slate-50 hover:text-brand text-slate-600 transition-colors">博客</a>
+                            <a href="#" class="block px-5 py-3 hover:bg-slate-50 hover:text-brand text-slate-600 transition-colors">客户案例</a>
+                            <a href="#" class="block px-5 py-3 hover:bg-slate-50 hover:text-brand text-slate-600 transition-colors">课程学习</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. 价格介绍 -->
+                <a href="#" class="px-4 py-2 hover:text-brand transition-colors">价格介绍</a>
+            </div>
+
+            <button onclick="openDiagnosisModal()" class="hidden md:inline-flex px-6 py-2.5 bg-brand hover:bg-brand-600 text-white font-brand font-bold rounded-full transition-all shadow-glow hover:shadow-lg transform hover:-translate-y-0.5 cursor-pointer">
+                预约诊断
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
     <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden" id="about">
         <div class="blob-bg bg-brand-100 w-96 h-96 rounded-full top-0 left-[-100px]"></div>
         <div class="blob-bg bg-blue-100 w-96 h-96 rounded-full bottom-0 right-[-100px]"></div>
 
         <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Left Content -->
             <div class="space-y-8">
                 <div class="inline-flex items-center px-4 py-2 rounded-full bg-brand-50 border border-brand-100 text-brand font-bold text-xs uppercase tracking-wider">
                     <span class="w-2 h-2 rounded-full bg-brand mr-2 animate-pulse"></span>
@@ -136,15 +339,19 @@
                 
                 <div class="pt-8 flex items-center gap-4 text-sm font-medium text-slate-600">
                     <div class="flex -space-x-3">
+                        <!-- Battery Icon -->
                         <div class="w-10 h-10 rounded-full bg-white border-2 border-slate-50 flex items-center justify-center text-slate-400 shadow-sm z-40" title="电池新能源">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                         </div>
+                        <!-- Excavator Icon (Construction) -->
                         <div class="w-10 h-10 rounded-full bg-white border-2 border-slate-50 flex items-center justify-center text-slate-400 shadow-sm z-30" title="工程机械">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 21v-8h-2m-6 8v-4h2m4 4v-4h-2m-4 4v-8H7m2 0h6"></path></svg>
                         </div>
+                        <!-- Lamp Icon (Lighting) -->
                         <div class="w-10 h-10 rounded-full bg-white border-2 border-slate-50 flex items-center justify-center text-slate-400 shadow-sm z-20" title="照明灯具">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
                         </div>
+                        <!-- Mechanical Arm Icon (Automation) -->
                         <div class="w-10 h-10 rounded-full bg-white border-2 border-slate-50 flex items-center justify-center text-slate-400 shadow-sm z-10" title="工业机器人">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                         </div>
@@ -153,6 +360,7 @@
                 </div>
             </div>
 
+            <!-- Right Profile Card -->
             <div class="relative">
                 <div class="glass-card rounded-3xl p-8 relative z-10 transform rotate-1 hover:rotate-0 transition-transform duration-500">
                     <div class="flex items-center gap-6 mb-6">
@@ -194,7 +402,9 @@
         </div>
     </section>
 
+    <!-- NEW SECTION: Value Mismatch (价值重构) -->
     <section id="value-mismatch" class="py-24 bg-slate-900 relative overflow-hidden text-white">
+        <!-- Background decorative elements -->
         <div class="absolute top-0 right-0 w-96 h-96 bg-brand opacity-10 rounded-full blur-[100px] transform translate-x-1/2 -translate-y-1/2"></div>
         <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-600 opacity-10 rounded-full blur-[100px] transform -translate-x-1/2 translate-y-1/2"></div>
 
@@ -210,11 +420,13 @@
             </div>
 
             <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+                <!-- Left: The Current Reality (Advertiser) -->
                 <div class="bg-white/5 rounded-3xl p-8 border border-white/10 relative group hover:bg-white/10 transition-colors">
                     <div class="absolute -top-6 left-8 bg-slate-800 text-slate-400 px-4 py-2 rounded-lg text-sm font-bold border border-slate-700">
                         现状：价值被阻断
                     </div>
                     
+                    <!-- Top Assets -->
                     <div class="flex justify-center gap-3 mb-8 opacity-50 grayscale group-hover:grayscale-0 transition-all duration-500">
                         <div class="bg-slate-800 p-3 rounded-xl border border-slate-700 text-xs text-center w-24">
                             <div class="text-2xl mb-1">🏭</div>
@@ -230,6 +442,7 @@
                         </div>
                     </div>
 
+                    <!-- The Gap -->
                     <div class="flex flex-col items-center justify-center text-center relative py-4">
                         <div class="w-0.5 h-12 bg-red-500/30"></div>
                         <div class="bg-red-500/10 text-red-400 px-6 py-2 rounded-full border border-red-500/20 text-sm font-bold my-2 flex items-center gap-2">
@@ -239,6 +452,7 @@
                         <div class="w-0.5 h-12 bg-red-500/30"></div>
                     </div>
 
+                    <!-- The Result -->
                     <div class="bg-red-900/20 border border-red-500/20 rounded-2xl p-6 text-center mt-4">
                         <h4 class="text-red-400 font-bold text-xl mb-2">被动的“广告主”</h4>
                         <p class="text-slate-400 text-sm mb-4">缺少优质内容，或无法被检索，被迫购买高价广告流量</p>
@@ -249,11 +463,13 @@
                     </div>
                 </div>
 
+                <!-- Right: The Ideal State (Traffic Owner) -->
                 <div class="bg-gradient-to-br from-brand/10 to-brand-600/10 rounded-3xl p-8 border border-brand/30 relative shadow-[0_0_50px_-12px_rgba(255,107,61,0.2)]">
                     <div class="absolute -top-6 left-8 bg-brand text-white px-4 py-2 rounded-lg text-sm font-bold shadow-lg shadow-brand/40">
                         目标：价值货币化
                     </div>
 
+                    <!-- Top Assets (Activated) -->
                     <div class="flex justify-center gap-3 mb-8">
                         <div class="bg-slate-800 p-3 rounded-xl border border-brand/40 text-xs text-center w-24 shadow-[0_0_15px_rgba(255,107,61,0.3)] transform -translate-y-1">
                             <div class="text-2xl mb-1">🏭</div>
@@ -269,6 +485,7 @@
                         </div>
                     </div>
 
+                    <!-- The Solution Bridge -->
                     <div class="flex flex-col items-center justify-center text-center relative py-4">
                          <div class="absolute inset-0 flex items-center justify-center">
                             <div class="w-0.5 h-full bg-gradient-to-b from-brand/0 via-brand to-brand/0"></div>
@@ -279,6 +496,7 @@
                         </div>
                     </div>
 
+                    <!-- The Result -->
                     <div class="bg-brand/10 border border-brand/30 rounded-2xl p-6 text-center mt-4 relative overflow-hidden">
                         <div class="absolute inset-0 bg-gradient-to-t from-brand/10 to-transparent"></div>
                         <h4 class="text-brand font-bold text-xl mb-2 relative z-10">主动的“流量主”</h4>
@@ -291,6 +509,7 @@
                 </div>
             </div>
             
+            <!-- Arrow Indicator (Mobile only mostly, or centering graphic) -->
             <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 hidden lg:block">
                 <div class="bg-slate-900 p-2 rounded-full border border-slate-700">
                     <svg class="w-8 h-8 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -299,6 +518,7 @@
         </div>
     </section>
 
+    <!-- NEW SECTION: Core Philosophy (核心理念) -->
     <section class="py-20 bg-white border-b border-slate-100">
         <div class="max-w-5xl mx-auto px-6 text-center">
             <div class="mb-6">
@@ -311,6 +531,7 @@
         </div>
     </section>
 
+    <!-- 痛点与解决方案 -->
     <section id="problems" class="py-24 bg-white relative">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
@@ -322,6 +543,7 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Pain Points (1-4) -->
                 <div class="group p-8 rounded-3xl bg-slate-50 hover:bg-white border border-slate-100 hover:border-brand/20 transition-all hover:shadow-glow">
                     <div class="w-12 h-12 bg-red-100 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                         <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -352,6 +574,7 @@
                 </div>
             </div>
 
+            <!-- The Solution (Divider) -->
             <div class="mt-20 p-8 lg:p-12 rounded-3xl bg-slate-900 text-white relative overflow-hidden">
                 <div class="relative z-10 grid lg:grid-cols-2 gap-8 items-center">
                     <div>
@@ -384,6 +607,7 @@
         </div>
     </section>
 
+    <!-- 服务定位 (Venn Diagram) -->
     <section id="positioning" class="py-16 bg-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 text-center">
             <div class="mb-12">
@@ -395,28 +619,34 @@
             </div>
 
             <div class="relative max-w-5xl mx-auto h-[450px] hidden md:block">
+                <!-- Venn Center -->
                 <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px]">
+                    <!-- Top Left Circle -->
                     <div class="absolute top-0 left-0 w-60 h-60 bg-blue-50/90 rounded-full flex flex-col items-center justify-center p-4 text-center border-4 border-white shadow-lg z-10 mix-blend-multiply transition-transform hover:scale-105">
                         <span class="font-bold text-slate-800 text-lg mb-1">培养自有团队</span>
                         <span class="text-sm text-red-500 font-medium bg-white/80 px-2 py-0.5 rounded-full mt-1">劣势：速度慢</span>
                     </div>
                     
+                    <!-- Top Right Circle -->
                     <div class="absolute top-0 right-0 w-60 h-60 bg-purple-50/90 rounded-full flex flex-col items-center justify-center p-4 text-center border-4 border-white shadow-lg z-10 mix-blend-multiply transition-transform hover:scale-105">
                         <span class="font-bold text-slate-800 text-lg mb-1">外包服务商</span>
                         <span class="text-sm text-red-500 font-medium bg-white/80 px-2 py-0.5 rounded-full mt-1">劣势：成本高</span>
                     </div>
 
+                    <!-- Bottom Circle -->
                     <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-60 h-60 bg-emerald-50/90 rounded-full flex flex-col items-center justify-center p-4 text-center border-4 border-white shadow-lg z-10 mix-blend-multiply transition-transform hover:scale-105">
                         <span class="font-bold text-slate-800 text-lg mb-1 mt-16">单纯依赖 AI 工具</span>
                         <span class="text-sm text-red-500 font-medium bg-white/80 px-2 py-0.5 rounded-full mt-1">劣势：效果差</span>
                     </div>
 
+                    <!-- Center Intersection -->
                     <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[40%] w-32 h-32 bg-gradient-to-br from-brand to-orange-500 text-white rounded-full flex flex-col items-center justify-center z-20 shadow-[0_0_40px_rgba(255,107,61,0.4)] border-4 border-white">
                         <span class="font-logo text-2xl block leading-none mb-1">HereNow</span>
                         <span class="text-[10px] font-medium bg-white/20 px-2 py-0.5 rounded-full">最优解</span>
                     </div>
                 </div>
 
+                <!-- Text for Circle 1 (Top Left) -->
                 <div class="absolute top-16 left-0 w-64 text-left">
                     <div class="flex items-start gap-3 p-3 bg-white rounded-xl shadow-sm border border-slate-100 hover:border-brand/30 hover:shadow-md transition-all">
                         <div class="w-5 h-5 rounded-full bg-brand flex-shrink-0 flex items-center justify-center text-white text-xs font-bold mt-0.5">✓</div>
@@ -424,6 +654,7 @@
                     </div>
                 </div>
 
+                <!-- Text for Circle 2 (Top Right) -->
                 <div class="absolute top-16 right-0 w-64 text-left">
                     <div class="flex items-start gap-3 p-3 bg-white rounded-xl shadow-sm border border-slate-100 hover:border-brand/30 hover:shadow-md transition-all">
                         <div class="w-5 h-5 rounded-full bg-brand flex-shrink-0 flex items-center justify-center text-white text-xs font-bold mt-0.5">✓</div>
@@ -431,6 +662,7 @@
                     </div>
                 </div>
 
+                <!-- Text for Circle 3 (Bottom Right) -->
                 <div class="absolute bottom-16 right-10 w-72 text-left">
                     <div class="flex items-start gap-3 p-3 bg-white rounded-xl shadow-sm border border-slate-100 hover:border-brand/30 hover:shadow-md transition-all">
                         <div class="w-5 h-5 rounded-full bg-brand flex-shrink-0 flex items-center justify-center text-white text-xs font-bold mt-0.5">✓</div>
@@ -439,7 +671,9 @@
                 </div>
             </div>
 
+            <!-- Mobile Layout (Stack) -->
             <div class="md:hidden space-y-6">
+                <!-- In-house -->
                 <div class="bg-blue-50/50 p-6 rounded-2xl border border-blue-100 text-center">
                     <h3 class="font-bold text-slate-800 mb-1">培养自有团队</h3>
                     <span class="inline-block text-xs text-red-500 font-medium bg-white px-2 py-0.5 rounded-full mb-3 shadow-sm">劣势：速度慢</span>
@@ -449,6 +683,7 @@
                     </div>
                 </div>
 
+                <!-- Outsourcing -->
                 <div class="bg-purple-50/50 p-6 rounded-2xl border border-purple-100 text-center">
                     <h3 class="font-bold text-slate-800 mb-1">外包服务商</h3>
                     <span class="inline-block text-xs text-red-500 font-medium bg-white px-2 py-0.5 rounded-full mb-3 shadow-sm">劣势：成本高</span>
@@ -458,6 +693,7 @@
                     </div>
                 </div>
 
+                <!-- AI Tools -->
                 <div class="bg-emerald-50/50 p-6 rounded-2xl border border-emerald-100 text-center">
                     <h3 class="font-bold text-slate-800 mb-1">依靠 AI 工具</h3>
                     <span class="inline-block text-xs text-red-500 font-medium bg-white px-2 py-0.5 rounded-full mb-3 shadow-sm">劣势：效果差</span>
@@ -467,6 +703,7 @@
                     </div>
                 </div>
 
+                <!-- HereNow Center (Mobile) -->
                 <div class="bg-gradient-to-r from-brand to-orange-500 p-6 rounded-2xl text-white text-center shadow-lg">
                     <h3 class="font-logo text-3xl mb-2">HereNow</h3>
                     <span class="inline-block text-xs font-bold bg-white/20 px-3 py-1 rounded-full mb-2">出海营销最优解</span>
@@ -476,6 +713,7 @@
         </div>
     </section>
 
+    <!-- 服务体系 (Glassmorphism Cards) -->
     <section id="services" class="py-24 bg-slate-50 relative overflow-hidden">
         <div class="blob-bg bg-brand-100 w-[500px] h-[500px] rounded-full top-20 left-1/2 transform -translate-x-1/2"></div>
 
@@ -488,6 +726,8 @@
             </div>
 
             <div class="grid md:grid-cols-2 gap-8">
+                <!-- Service Cards 1-4 -->
+                <!-- Card 1 -->
                 <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 flex group">
                     <div class="flex-1 pr-4">
                         <div class="w-14 h-14 bg-white text-brand border-2 border-brand rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 shadow-lg transition-all duration-300 group-hover:bg-brand group-hover:text-white group-hover:border-transparent group-hover:shadow-brand/30">1</div>
@@ -511,6 +751,7 @@
                     </div>
                 </div>
 
+                <!-- Card 2 -->
                 <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 flex group">
                     <div class="flex-1 pr-4">
                         <div class="w-14 h-14 bg-white text-brand border-2 border-brand rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 shadow-lg transition-all duration-300 group-hover:bg-brand group-hover:text-white group-hover:border-transparent group-hover:shadow-brand/30">2</div>
@@ -534,6 +775,7 @@
                     </div>
                 </div>
 
+                <!-- Card 3 -->
                 <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 flex group">
                     <div class="flex-1 pr-4">
                         <div class="w-14 h-14 bg-white text-brand border-2 border-brand rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 shadow-lg transition-all duration-300 group-hover:bg-brand group-hover:text-white group-hover:border-transparent group-hover:shadow-brand/30">3</div>
@@ -557,6 +799,7 @@
                     </div>
                 </div>
 
+                <!-- Card 4 -->
                 <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 flex group">
                     <div class="flex-1 pr-4">
                         <div class="w-14 h-14 bg-white text-brand border-2 border-brand rounded-2xl flex items-center justify-center text-2xl font-bold mb-6 shadow-lg transition-all duration-300 group-hover:bg-brand group-hover:text-white group-hover:border-transparent group-hover:shadow-brand/30">4</div>
@@ -583,6 +826,7 @@
         </div>
     </section>
 
+    <!-- NEW SECTION: Cooperation Process (合作流程) -->
     <section id="process" class="py-24 bg-white relative">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
@@ -594,8 +838,10 @@
             </div>
 
             <div class="grid md:grid-cols-4 gap-6 relative">
+                <!-- Connecting Line (Desktop) -->
                 <div class="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-gradient-to-r from-brand/0 via-brand/30 to-brand/0 z-0"></div>
 
+                <!-- Step 1 -->
                 <div class="relative z-10 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-glow transition-all group text-center flex flex-col h-full">
                     <div class="w-24 h-24 mx-auto bg-brand-50 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform relative border-4 border-white shadow-lg shrink-0">
                         <span class="font-logo text-3xl text-brand">01</span>
@@ -603,10 +849,12 @@
                     <h3 class="font-brand text-xl font-bold text-slate-900 mb-1">诊断与策略</h3>
                     <p class="text-xs font-bold text-brand uppercase mb-3 tracking-wide">Week 1-2</p>
                     
+                    <!-- Action Description -->
                     <p class="text-sm text-slate-500 mb-4 h-12 flex items-center justify-center px-2">
                         分析网站现有问题，制定整改落地策略
                     </p>
 
+                    <!-- Deliverables -->
                     <div class="mt-auto bg-slate-50 p-4 rounded-xl text-left w-full border border-slate-100">
                         <span class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 block border-b border-slate-200 pb-2">交付产出物</span>
                         <ul class="text-sm text-slate-700 space-y-2">
@@ -622,6 +870,7 @@
                     </div>
                 </div>
 
+                <!-- Step 2 -->
                 <div class="relative z-10 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-glow transition-all group text-center flex flex-col h-full">
                     <div class="w-24 h-24 mx-auto bg-brand-50 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform relative border-4 border-white shadow-lg shrink-0">
                         <span class="font-logo text-3xl text-brand">02</span>
@@ -629,10 +878,12 @@
                     <h3 class="font-brand text-xl font-bold text-slate-900 mb-1">搭建AI知识库</h3>
                     <p class="text-xs font-bold text-brand uppercase mb-3 tracking-wide">Month 1</p>
                     
-                     <p class="text-sm text-slate-500 mb-4 h-12 flex items-center justify-center px-2 leading-tight">
+                     <!-- Action Description -->
+                    <p class="text-sm text-slate-500 mb-4 h-12 flex items-center justify-center px-2 leading-tight">
                         整合资料，分析客户画像与需求，梳理购买旅程选题库
                     </p>
 
+                    <!-- Deliverables -->
                     <div class="mt-auto bg-slate-50 p-4 rounded-xl text-left w-full border border-slate-100">
                         <span class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 block border-b border-slate-200 pb-2">交付产出物</span>
                         <ul class="text-sm text-slate-700 space-y-2">
@@ -648,6 +899,7 @@
                     </div>
                 </div>
 
+                <!-- Step 3 -->
                 <div class="relative z-10 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-glow transition-all group text-center flex flex-col h-full">
                     <div class="w-24 h-24 mx-auto bg-brand-50 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform relative border-4 border-white shadow-lg shrink-0">
                         <span class="font-logo text-3xl text-brand">03</span>
@@ -655,10 +907,12 @@
                     <h3 class="font-brand text-xl font-bold text-slate-900 mb-1">内容规划与输出</h3>
                     <p class="text-xs font-bold text-brand uppercase mb-3 tracking-wide">Month 2-3</p>
                     
-                     <p class="text-sm text-slate-500 mb-4 h-12 flex items-center justify-center px-2 leading-tight">
+                     <!-- Action Description -->
+                    <p class="text-sm text-slate-500 mb-4 h-12 flex items-center justify-center px-2 leading-tight">
                         基于采购旅程规划选题，输出EEAT博客及社媒内容
                     </p>
 
+                    <!-- Deliverables -->
                     <div class="mt-auto bg-slate-50 p-4 rounded-xl text-left w-full border border-slate-100">
                         <span class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 block border-b border-slate-200 pb-2">交付产出物</span>
                         <ul class="text-sm text-slate-700 space-y-2">
@@ -674,6 +928,7 @@
                     </div>
                 </div>
 
+                <!-- Step 4 -->
                 <div class="relative z-10 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-glow transition-all group text-center flex flex-col h-full">
                     <div class="w-24 h-24 mx-auto bg-brand-50 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform relative border-4 border-white shadow-lg shrink-0">
                         <span class="font-logo text-3xl text-brand">04</span>
@@ -681,10 +936,12 @@
                     <h3 class="font-brand text-xl font-bold text-slate-900 mb-1">复盘与迭代</h3>
                     <p class="text-xs font-bold text-brand uppercase mb-3 tracking-wide">Monthly</p>
                     
-                     <p class="text-sm text-slate-500 mb-4 h-12 flex items-center justify-center px-2 leading-tight">
+                     <!-- Action Description -->
+                    <p class="text-sm text-slate-500 mb-4 h-12 flex items-center justify-center px-2 leading-tight">
                         数据复盘与策略调整，持续优化转化效果
                     </p>
 
+                    <!-- Deliverables -->
                     <div class="mt-auto bg-slate-50 p-4 rounded-xl text-left w-full border border-slate-100">
                         <span class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 block border-b border-slate-200 pb-2">交付产出物</span>
                         <ul class="text-sm text-slate-700 space-y-2">
@@ -703,6 +960,7 @@
         </div>
     </section>
 
+    <!-- NEW SECTION: FAQ (常见问题) -->
     <section class="py-24 bg-slate-50 relative">
          <div class="max-w-4xl mx-auto px-6">
             <div class="text-center mb-16">
@@ -714,6 +972,7 @@
             </div>
 
             <div class="space-y-4">
+                <!-- Q1 -->
                 <details class="group bg-white rounded-2xl shadow-sm border border-slate-100 open:ring-1 open:ring-brand/20 transition-all">
                     <summary class="flex items-center justify-between p-6 cursor-pointer font-bold text-lg text-slate-800 hover:text-brand transition-colors">
                         <span>具体的合作收费模式是怎样的？</span>
@@ -726,6 +985,7 @@
                     </div>
                 </details>
 
+                <!-- Q2 -->
                 <details class="group bg-white rounded-2xl shadow-sm border border-slate-100 open:ring-1 open:ring-brand/20 transition-all">
                     <summary class="flex items-center justify-between p-6 cursor-pointer font-bold text-lg text-slate-800 hover:text-brand transition-colors">
                         <span>多久能看到效果？有效果保证吗？</span>
@@ -738,6 +998,7 @@
                     </div>
                 </details>
 
+                <!-- Q3 -->
                 <details class="group bg-white rounded-2xl shadow-sm border border-slate-100 open:ring-1 open:ring-brand/20 transition-all">
                     <summary class="flex items-center justify-between p-6 cursor-pointer font-bold text-lg text-slate-800 hover:text-brand transition-colors">
                         <span>我们行业非常垂直冷门，有那么多内容选题可写吗？</span>
@@ -750,6 +1011,7 @@
                     </div>
                 </details>
 
+                <!-- Q4 -->
                 <details class="group bg-white rounded-2xl shadow-sm border border-slate-100 open:ring-1 open:ring-brand/20 transition-all">
                     <summary class="flex items-center justify-between p-6 cursor-pointer font-bold text-lg text-slate-800 hover:text-brand transition-colors">
                         <span>我已经有网站运营团队了，还需要你们吗？</span>
@@ -765,6 +1027,7 @@
          </div>
     </section>
 
+    <!-- Featured Case Studies (Carousel) -->
     <section id="featured-cases" class="py-24 bg-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
@@ -775,12 +1038,16 @@
                 <p class="mt-2 text-slate-500">真实的数据增长，覆盖多个B2B垂直领域</p>
             </div>
 
+            <!-- Horizontal Scroll Wrapper with Arrows -->
             <div class="relative group max-w-6xl mx-auto">
+                <!-- Left Arrow -->
                 <button onclick="scrollCarousel('left')" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-20 w-12 h-12 bg-white rounded-full shadow-lg border border-slate-100 text-brand flex items-center justify-center hover:bg-brand hover:text-white transition-all opacity-0 group-hover:opacity-100 hidden md:flex cursor-pointer">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                 </button>
 
+                <!-- Scroll Container -->
                 <div id="caseCarousel" class="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory no-scrollbar cursor-grab active:cursor-grabbing px-2" style="-webkit-overflow-scrolling: touch;">
+                    <!-- Card 1 -->
                     <div class="flex-shrink-0 w-80 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all p-6 border border-slate-100 snap-center">
                         <h4 class="font-brand text-xl font-bold text-slate-800 mb-2">挖掘机械</h4>
                         <p class="text-xs text-slate-400 mb-4 uppercase tracking-wider">Excavator Machinery</p>
@@ -798,6 +1065,7 @@
                         </div>
                     </div>
 
+                    <!-- Card 2 -->
                     <div class="flex-shrink-0 w-80 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all p-6 border border-slate-100 snap-center">
                         <h4 class="font-brand text-xl font-bold text-slate-800 mb-2">锂电池</h4>
                         <p class="text-xs text-slate-400 mb-4 uppercase tracking-wider">Lithium Battery</p>
@@ -815,6 +1083,7 @@
                         </div>
                     </div>
 
+                    <!-- Card 3 -->
                     <div class="flex-shrink-0 w-80 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all p-6 border border-slate-100 snap-center">
                         <h4 class="font-brand text-xl font-bold text-slate-800 mb-2">电子元器件</h4>
                         <p class="text-xs text-slate-400 mb-4 uppercase tracking-wider">Electronic Components</p>
@@ -832,6 +1101,7 @@
                         </div>
                     </div>
 
+                    <!-- Card 4 -->
                     <div class="flex-shrink-0 w-80 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all p-6 border border-slate-100 snap-center">
                         <h4 class="font-brand text-xl font-bold text-slate-800 mb-2">电气设备</h4>
                         <p class="text-xs text-slate-400 mb-4 uppercase tracking-wider">Electrical Equipment</p>
@@ -849,6 +1119,7 @@
                         </div>
                     </div>
 
+                    <!-- Card 5 -->
                     <div class="flex-shrink-0 w-80 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all p-6 border border-slate-100 snap-center">
                         <h4 class="font-brand text-xl font-bold text-slate-800 mb-2">入境游</h4>
                         <p class="text-xs text-slate-400 mb-4 uppercase tracking-wider">Inbound Tourism</p>
@@ -866,6 +1137,7 @@
                         </div>
                     </div>
 
+                    <!-- Card 6 -->
                     <div class="flex-shrink-0 w-80 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all p-6 border border-slate-100 snap-center">
                         <h4 class="font-brand text-xl font-bold text-slate-800 mb-2">玻璃制造</h4>
                         <p class="text-xs text-slate-400 mb-4 uppercase tracking-wider">Glass Manufacturing</p>
@@ -883,6 +1155,7 @@
                         </div>
                     </div>
 
+                    <!-- Card 7 -->
                     <div class="flex-shrink-0 w-80 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all p-6 border border-slate-100 snap-center">
                         <h4 class="font-brand text-xl font-bold text-slate-800 mb-2">PCB</h4>
                         <p class="text-xs text-slate-400 mb-4 uppercase tracking-wider">Printed Circuit Board</p>
@@ -900,6 +1173,7 @@
                         </div>
                     </div>
 
+                    <!-- Card 8: Coming Soon -->
                     <div class="flex-shrink-0 w-80 bg-slate-50 rounded-2xl border-2 border-dashed border-slate-200 flex flex-col items-center justify-center p-6 snap-center text-center">
                         <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center text-slate-300 mb-4">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
@@ -909,11 +1183,13 @@
                     </div>
                 </div>
 
+                <!-- Right Arrow -->
                 <button onclick="scrollCarousel('right')" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-20 w-12 h-12 bg-white rounded-full shadow-lg border border-slate-100 text-brand flex items-center justify-center hover:bg-brand hover:text-white transition-all opacity-0 group-hover:opacity-100 hidden md:flex cursor-pointer">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                 </button>
             </div>
 
+            <!-- Action Button -->
             <div class="text-center mt-12">
                 <button onclick="openCaseModal()" class="px-8 py-4 bg-white text-brand border border-brand font-brand font-bold rounded-2xl hover:bg-brand hover:text-white transition-all shadow-glow transform hover:scale-105 cursor-pointer">
                     申请案例演示
@@ -922,6 +1198,7 @@
         </div>
     </section>
 
+    <!-- 客户口碑 -->
     <section id="cases" class="py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-end mb-12">
@@ -936,7 +1213,9 @@
                 </div>
             </div>
 
+            <!-- Testimonial Grid -->
             <div class="grid md:grid-cols-3 gap-6">
+                <!-- Case 1 (风景头像) -->
                 <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm">
                     <div class="flex gap-1 text-yellow-400 mb-4">★★★★★</div>
                     <p class="text-slate-700 mb-6 italic">"朋友介绍来的，Tim 团队的确非常专业，不仅仅帮忙诊断问题，并且帮我们规划了整个内容策略并高效执行。自然流量和精准询盘在6个月内实现了快速提升。"</p>
@@ -949,7 +1228,8 @@
                     </div>
                 </div>
 
-                 <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm">
+                 <!-- Case 2 (卡通宇航员头像) -->
+                <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm">
                     <div class="flex gap-1 text-yellow-400 mb-4">★★★★★</div>
                     <p class="text-slate-700 mb-6 italic">"Tim 能把市面上最强的几个 AI 工具进行流程化组合，保质保量完成内容交付，确实帮我们节省了很大一块成本，内部团队也得到的学习"</p>
                     <div class="flex items-center gap-3">
@@ -961,7 +1241,8 @@
                     </div>
                 </div>
 
-                 <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm">
+                 <!-- Case 3 (萌宠猫咪头像) -->
+                <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm">
                     <div class="flex gap-1 text-yellow-400 mb-4">★★★★★</div>
                     <p class="text-slate-700 mb-6 italic">"以前最头痛的就是产出内容，公司缺少案例，海外客户不配合反馈，Tim 通过 AI 工具流帮我们解决了案例包装这一痛点，效果非常好。"</p>
                     <div class="flex items-center gap-3">
@@ -976,6 +1257,7 @@
         </div>
     </section>
 
+    <!-- Contact / CTA -->
     <section id="contact" class="py-24 relative overflow-hidden">
         <div class="absolute inset-0 bg-slate-900"></div>
         <div class="absolute inset-0 bg-gradient-to-r from-brand/20 to-transparent"></div>
@@ -997,6 +1279,7 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="text-2xl font-logo text-white">HereNow</div>
@@ -1006,6 +1289,7 @@
         </div>
     </footer>
 
+    <!-- WeChat Modal -->
     <div id="wechatModal" class="modal fixed inset-0 z-[100] flex items-center justify-center bg-slate-900/50 backdrop-blur-sm hidden">
         <div class="bg-white p-8 rounded-3xl shadow-2xl relative max-w-sm w-full mx-4 modal-content">
             <button onclick="closeModals()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition-colors">
@@ -1015,6 +1299,9 @@
                 <h3 class="font-brand text-2xl font-bold text-slate-900 mb-2">添加微信咨询</h3>
                 <p class="text-slate-500 mb-6 text-sm">扫码直接与 Tim 沟通您的出海需求</p>
                 <div class="bg-slate-50 p-4 rounded-2xl inline-block border border-slate-100">
+                    <!-- 
+                        ⚠️ 微信二维码：动态生成的二维码
+                    -->
                     <img src="https://herenow.services/images/qrcode.png" alt="WeChat QR Code" class="w-48 h-48 object-contain">
                 </div>
                 <p class="mt-4 text-xs text-slate-400">微信号：18924585563（同手机）</p>
@@ -1022,6 +1309,7 @@
         </div>
     </div>
 
+    <!-- Diagnosis Modal -->
     <div id="diagnosisModal" class="modal fixed inset-0 z-[100] flex items-center justify-center bg-slate-900/50 backdrop-blur-sm hidden">
         <div class="bg-white p-8 rounded-3xl shadow-2xl relative max-w-lg w-full mx-4 modal-content">
             <button onclick="closeModals()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition-colors">
@@ -1062,6 +1350,7 @@
         </div>
     </div>
 
+    <!-- Case Modal -->
     <div id="caseModal" class="modal fixed inset-0 z-[100] flex items-center justify-center bg-slate-900/50 backdrop-blur-sm hidden">
         <div class="bg-white p-8 rounded-3xl shadow-2xl relative max-w-lg w-full mx-4 modal-content">
             <button onclick="closeModals()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition-colors">
@@ -1102,8 +1391,7 @@
         </div>
     </div>
 
-    <script src="navbar.js"></script>
-
+    <!-- Scripts for Modals and Carousel -->
     <script>
         // ⚠️ 替换为您自己的 Google Apps Script Web App URL
         const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyeM51r1bbsyz3RL5H8I3G8okFwqUZ3VMPXcZsqMU3kddiafRw__V20EgCdgySt6hw4/exec";
