@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn领英代运营 | B2B出海个人IP打造与精准获客 - HereNow</title>
+    <meta name="description" content="别让您的领英账号变成广告机器。HereNow提供专业的LinkedIn代运营服务，从个人IP打造、安全加人养号、到高质量内容输出，帮您建立真实的B2B商业人脉网络。">
+    
+    <!-- 1. Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 2. 主题配置 -->
+    <script src="theme.js"></script>
+    
+    <!-- 3. 自定义样式 -->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* 引力场波纹动画 */
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: ripple-effect 4s linear infinite;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        @keyframes ripple-effect {
+            0% { width: 0; height: 0; opacity: 0.8; border-color: rgba(0, 119, 181, 0.8); }
+            100% { width: 500px; height: 500px; opacity: 0; border-color: rgba(0, 119, 181, 0); }
+        }
+
+        /* 浮动头像动画 */
+        .float-avatar {
+            animation: float 6s ease-in-out infinite;
+        }
+        .float-avatar-delayed {
+            animation: float 6s ease-in-out infinite 3s;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* 消息弹出动画 */
+        .msg-pop {
+            opacity: 0;
+            transform: translateY(20px) scale(0.9);
+            animation: popUp 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+        @keyframes popUp {
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-500 bg-slate-50 antialiased selection:bg-brand selection:text-white">
+
+    <!-- 导航栏占位 -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section: 观念重塑 -->
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-slate-900 text-white">
+        <!-- 背景装饰 -->
+        <div class="absolute inset-0 overflow-hidden opacity-10">
+            <!-- Grid Background -->
+            <div class="absolute inset-0" style="background-image: radial-gradient(#0077b5 1px, transparent 1px); background-size: 30px 30px;"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+            <div class="text-left relative z-20">
+                <div class="inline-flex items-center px-4 py-2 rounded-full bg-[#0077b5]/20 border border-[#0077b5]/40 text-blue-300 font-bold text-xs uppercase tracking-wider mb-4 backdrop-blur-md">
+                    <span class="w-2 h-2 rounded-full bg-[#0077b5] mr-2 animate-pulse"></span>
+                    LinkedIn Operation Service
+                </div>
+                <div class="text-lg lg:text-xl text-slate-300 mb-6 font-medium">
+                    领英代运营
+                </div>
+                
+                <h1 class="font-brand text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+                    别用做“公众号”的思维<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#0077b5] to-blue-400">做 LinkedIn</span>
+                </h1>
+                
+                <p class="text-xl text-slate-300 leading-relaxed mb-10">
+                    只会发硬广？加人就被封？国内小编不懂海外 B2B 社交礼仪，把领英做成了无人问津的广告牌。<br>
+                    <strong>B2B 的本质是 P2P (Person to Person)。</strong> 我们帮您打造有血有肉的专家人设，建立真实的商业信任。
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button onclick="document.getElementById('linkedin-form').scrollIntoView({behavior: 'smooth'})" class="px-8 py-4 bg-[#0077b5] hover:bg-blue-600 text-white font-brand font-bold rounded-2xl shadow-lg shadow-blue-500/30 transition-all transform hover:scale-105 cursor-pointer flex items-center gap-2 justify-center">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        获取运营策划建议
+                    </button>
+                </div>
+            </div>
+
+            <!-- Visual: Network Galaxy (Updated) -->
+            <div class="relative h-[450px] flex items-center justify-center pointer-events-none select-none">
+                <!-- Ripples -->
+                <div class="ripple" style="animation-delay: 0s;"></div>
+                <div class="ripple" style="animation-delay: 1.3s;"></div>
+                <div class="ripple" style="animation-delay: 2.6s;"></div>
+
+                <!-- Central Node (You) -->
+                <div class="relative z-20 w-28 h-28 bg-white rounded-full p-1.5 shadow-[0_0_60px_rgba(0,119,181,0.6)]">
+                    <div class="w-full h-full bg-slate-900 rounded-full overflow-hidden relative flex items-center justify-center border-4 border-[#0077b5]">
+                        <span class="font-logo text-2xl text-white">YOU</span>
+                    </div>
+                    <div class="absolute -right-2 -top-2 bg-green-500 w-6 h-6 rounded-full border-4 border-slate-900"></div>
+                </div>
+
+                <!-- Orbiting Prospects (Replaced Emojis with Avatars) -->
+                <div class="absolute w-full h-full">
+                    <!-- Prospect 1 -->
+                    <div class="absolute top-[10%] left-[20%] float-avatar">
+                        <div class="flex items-center gap-2 bg-white/10 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20 shadow-lg">
+                            <div class="w-8 h-8 rounded-full bg-blue-200 flex items-center justify-center text-[10px] text-blue-800 font-bold">CEO</div>
+                            <span class="text-xs font-bold text-white">David</span>
+                        </div>
+                        <!-- Connection Line -->
+                        <svg class="absolute top-1/2 left-1/2 w-[200px] h-[200px] -z-10" style="transform: translate(20px, 20px) rotate(45deg);">
+                            <line x1="0" y1="0" x2="100" y2="100" stroke="url(#lineGrad)" stroke-width="1" stroke-dasharray="4" />
+                        </svg>
+                    </div>
+
+                    <!-- Prospect 2 -->
+                    <div class="absolute bottom-[20%] right-[10%] float-avatar-delayed">
+                        <div class="flex items-center gap-2 bg-white/10 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20 shadow-lg">
+                            <div class="w-8 h-8 rounded-full bg-purple-200 flex items-center justify-center text-[10px] text-purple-800 font-bold">VP</div>
+                            <span class="text-xs font-bold text-white">Sarah</span>
+                        </div>
+                    </div>
+
+                    <!-- Prospect 3 -->
+                    <div class="absolute top-[30%] right-[15%] float-avatar">
+                        <div class="flex items-center gap-2 bg-white/10 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20 shadow-lg">
+                            <div class="w-8 h-8 rounded-full bg-orange-200 flex items-center justify-center text-[10px] text-orange-800 font-bold">PM</div>
+                            <span class="text-xs font-bold text-white">Mike</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mock Message Bubble (Optimized position) -->
+                <div class="absolute bottom-10 left-0 lg:left-10 bg-white text-slate-800 p-4 rounded-2xl rounded-bl-none shadow-2xl text-sm font-medium msg-pop max-w-[240px] z-30" style="animation-delay: 1s;">
+                    <div class="flex items-center gap-2 mb-2">
+                        <div class="w-6 h-6 rounded-full bg-[#0077b5] flex items-center justify-center text-white text-[10px]">in</div>
+                        <span class="text-xs text-slate-400">New Message</span>
+                    </div>
+                    "Hi, I'm interested in your new excavator series. Can we talk?"
+                </div>
+
+                <defs>
+                    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:rgba(255,255,255,0)" />
+                        <stop offset="100%" style="stop-color:rgba(255,255,255,0.5)" />
+                    </linearGradient>
+                </defs>
+            </div>
+        </div>
+    </section>
+
+    <!-- 痛点解析：运营的三种死法 -->
+    <section class="py-20 bg-white border-b border-slate-100">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h2 class="font-brand text-2xl md:text-3xl font-bold text-slate-900 mb-12">
+                为什么您的 LinkedIn 账号<br>
+                <span class="text-red-500 decoration-4 decoration-red-100 underline-offset-4 underline">总是做不起来？</span>
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8 text-left">
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-red-200 transition-colors group">
+                    <div class="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">📢</div>
+                    <h3 class="font-bold text-xl text-slate-900 mb-3">广告机器</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        把领英当朋友圈发，全屏都是产品图和促销海报。
+                        <br><strong class="text-red-500">结果：</strong> 客户看一眼就屏蔽，不仅没互动，还显得品牌很 Low。
+                    </p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-red-200 transition-colors group">
+                    <div class="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">🚫</div>
+                    <h3 class="font-bold text-xl text-slate-900 mb-3">封号危机</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        不懂平台规则，使用外挂工具疯狂加人，或短时间发送大量相同私信。
+                        <br><strong class="text-red-500">结果：</strong> 账号被限制甚至永久封禁，积累的人脉瞬间清零。
+                    </p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-red-200 transition-colors group">
+                    <div class="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">👻</div>
+                    <h3 class="font-bold text-xl text-slate-900 mb-3">僵尸账号</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        只有公司 Page，没有个人 IP。几个月才更一条新闻，没人点赞没人评。
+                        <br><strong class="text-red-500">结果：</strong> 客户来背调时，觉得这家公司毫无活力，甚至怀疑是否倒闭。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心策略：真人感与信任 -->
+    <section class="py-24 bg-slate-50 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left: Content -->
+                <div>
+                    <span class="text-[#0077b5] font-bold tracking-wider text-sm uppercase mb-2 block">Core Strategy</span>
+                    <h2 class="font-brand text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
+                        B2B 的终局是 <span class="text-[#0077b5]">H2H</span><br>
+                        (Human to Human)
+                    </h2>
+                    <p class="text-slate-600 mb-8 leading-relaxed">
+                        在领英上，人们更愿意相信一个“活生生的专家”，而不是一个“冷冰冰的 Logo”。我们的运营核心是帮您塑造<strong>有温度、有见地、有价值</strong>的个人 IP。
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-xl shadow-sm border border-slate-100">👤</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Profile 完美装修</h4>
+                                <p class="text-sm text-slate-500 mt-1">从 Headline 到 About，用客户听得懂的语言展示专业度，而非自我吹嘘。</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-xl shadow-sm border border-slate-100">🛡️</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">安全养号与增长</h4>
+                                <p class="text-sm text-slate-500 mt-1">模拟真人行为轨迹，在平台规则允许的范围内，精准连接目标客户 (ICP)。</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-xl shadow-sm border border-slate-100">🤝</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">互动式内容营销</h4>
+                                <p class="text-sm text-slate-500 mt-1">发布引发讨论的行业观点、投票和幕后故事，激活沉睡列表，让客户主动找你。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Visual (Profile Card Transformation - Updated) -->
+                <div class="relative flex justify-center lg:justify-end">
+                    <!-- Before Card (Faded) -->
+                    <div class="absolute top-0 right-10 w-72 bg-slate-200 rounded-xl p-4 transform rotate-6 opacity-40 scale-90 border border-slate-300 z-0 hidden sm:block">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-12 h-12 bg-slate-300 rounded-full"></div>
+                            <div class="space-y-2 w-32">
+                                <div class="h-3 bg-slate-300 rounded"></div>
+                                <div class="h-2 bg-slate-300 rounded w-20"></div>
+                            </div>
+                        </div>
+                        <div class="h-20 bg-slate-300 rounded mb-2 flex items-center justify-center text-xs text-slate-500">No Banner</div>
+                        <div class="h-2 bg-slate-300 rounded w-full mb-1"></div>
+                    </div>
+
+                    <!-- After Card (Active & Interactive) -->
+                    <div class="relative z-10 w-80 bg-white rounded-2xl p-0 shadow-2xl border border-slate-100 overflow-hidden transform transition-transform hover:-translate-y-1">
+                        <!-- Banner Area (Clickable) -->
+                        <a href="https://www.linkedin.com/in/tim-zhang-51204916a/" target="_blank" class="block h-24 bg-[url('https://herenow.services/images/share-card.png')] bg-cover bg-center relative group">
+                            <div class="absolute inset-0 bg-[#0077b5]/20 group-hover:bg-[#0077b5]/10 transition-colors"></div>
+                        </a>
+                        
+                        <div class="px-6 pb-6 relative">
+                            <!-- Avatar (Clickable) - Adjusted Position -->
+                            <a href="https://www.linkedin.com/in/tim-zhang-51204916a/" target="_blank" class="absolute -top-20 left-6 w-20 h-20 rounded-full border-4 border-white overflow-hidden shadow-md group">
+                                <img src="https://media.licdn.com/dms/image/v2/D5603AQFB4oEMn-f4ng/profile-displayphoto-shrink_800_800/B56ZbndTkoHUAc-/0/1747639941884?e=1766016000&v=beta&t=ifN-K02S7fe2_fUK3Sm9lglxcI2DABYdpjwxeSzvFCU" alt="Tim Zhang" class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-300">
+                            </a>
+
+                            <div class="mt-10">
+                                <a href="https://www.linkedin.com/in/tim-zhang-51204916a/" target="_blank" class="group block">
+                                    <h3 class="font-bold text-xl text-slate-900 group-hover:text-[#0077b5] group-hover:underline decoration-2 underline-offset-2 transition-colors">Tim Zhang <span class="text-sm font-normal text-slate-500 ml-1"></span></h3>
+                                </a>
+                                <p class="text-xs text-slate-600 mt-1 mb-2 leading-snug">Founder @ HereNow | Helping B2B Companies Grow with SEO & AI</p>
+                                
+                                <p class="text-xs text-slate-500 font-medium mb-4 flex items-center gap-1">
+                                    <span class="text-slate-800 font-bold">7,248</span> followers · <span class="text-slate-800 font-bold">500+</span> connections
+                                </p>
+                                
+                                <div class="flex gap-2 mb-6">
+                                    <a href="https://www.linkedin.com/in/tim-zhang-51204916a/" target="_blank" class="flex-1 bg-[#0077b5] hover:bg-blue-700 text-white text-sm font-bold py-1.5 rounded-full text-center transition-colors shadow-sm">
+                                        Connect
+                                    </a>
+                                    <button class="flex-1 border border-slate-400 text-slate-600 hover:bg-slate-50 text-sm font-bold py-1.5 rounded-full transition-colors">
+                                        Message
+                                    </button>
+                                </div>
+
+                                <div class="bg-slate-50 rounded-xl p-3 border border-slate-100">
+                                    <p class="text-[10px] text-slate-500 font-bold uppercase mb-1">Featured</p>
+                                    <div class="flex gap-3">
+                                        <div class="w-16 h-12 bg-slate-200 rounded-md shrink-0 overflow-hidden">
+                                            <!-- Tiny placeholder image -->
+                                            <div class="w-full h-full bg-slate-300"></div>
+                                        </div>
+                                        <div>
+                                            <p class="text-xs text-slate-800 font-medium line-clamp-2">"Stop treating LinkedIn like a job board. It's the most powerful B2B networking platform..." 
+                                            <span class="text-[#0077b5] cursor-pointer">...see more</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-4 mt-3 text-[10px] text-slate-400">
+                                        <span class="flex items-center gap-1">👍 248</span>
+                                        <span class="flex items-center gap-1">💬 42 comments</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服务流程 -->
+    <section class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-brand text-3xl font-bold text-slate-900 mb-4">代运营服务流程</h2>
+                <p class="text-slate-500">从 0 到 1，构建您的海外人脉资产</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="text-center p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md transition-all">
+                    <div class="text-4xl mb-4">🛠️</div>
+                    <h3 class="font-bold text-slate-900 mb-2">1. 账号基建</h3>
+                    <p class="text-sm text-slate-500">Profile 诊断与装修，Banner 设计，关键词埋设，打造完美的“第一印象”。</p>
+                </div>
+                <div class="text-center p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md transition-all">
+                    <div class="text-4xl mb-4">🔍</div>
+                    <h3 class="font-bold text-slate-900 mb-2">2. 精准加人</h3>
+                    <p class="text-sm text-slate-500">定义 ICP，使用 Sales Navigator 精准筛选潜在客户，手工发送个性化邀请。</p>
+                </div>
+                <div class="text-center p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md transition-all">
+                    <div class="text-4xl mb-4">✍️</div>
+                    <h3 class="font-bold text-slate-900 mb-2">3. 内容培育</h3>
+                    <p class="text-sm text-slate-500">规划内容日历，发布行业洞察、案例故事、投票贴，保持账号活跃度。</p>
+                </div>
+                <div class="text-center p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md transition-all">
+                    <div class="text-4xl mb-4">📈</div>
+                    <h3 class="font-bold text-slate-900 mb-2">4. 询盘转化</h3>
+                    <p class="text-sm text-slate-500">对产生互动的用户进行温和的私信跟进，引导至官网或预约会议。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom CTA Form -->
+    <section id="linkedin-form" class="py-24 bg-slate-50 relative">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center mb-10">
+                <h2 class="font-brand text-3xl font-bold text-slate-900 mb-2">获取 LinkedIn 运营策划建议</h2>
+                <p class="text-slate-500">别让您的海外客户在领英上搜不到您。立即开始行动。</p>
+            </div>
+
+            <form class="bg-white p-8 rounded-3xl border border-slate-100 shadow-lg space-y-6" onsubmit="submitToGoogleSheet(event, '领英运营咨询')">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">您的称呼</label>
+                        <input type="text" name="name" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#0077b5] focus:ring-1 focus:ring-[#0077b5] outline-none transition-all" placeholder="例如：李经理" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">微信/手机号</label>
+                        <input type="text" name="contact" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#0077b5] focus:ring-1 focus:ring-[#0077b5] outline-none transition-all" placeholder="方便我们联系" required>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">您的 LinkedIn 现状？(选填)</label>
+                    <div class="grid grid-cols-2 gap-2 text-sm text-slate-600">
+                        <label class="flex items-center gap-2"><input type="radio" name="status" value="还没注册"> 还没注册账号</label>
+                        <label class="flex items-center gap-2"><input type="radio" name="status" value="有账号没运营"> 有账号但没怎么管</label>
+                        <label class="flex items-center gap-2"><input type="radio" name="status" value="经常被封号"> 经常被限制/封号</label>
+                        <label class="flex items-center gap-2"><input type="radio" name="status" value="想提升询盘"> 运营正常但没询盘</label>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">您所在的行业/产品</label>
+                    <input type="text" name="industry" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#0077b5] focus:ring-1 focus:ring-[#0077b5] outline-none transition-all" placeholder="例如：光伏储能" required>
+                </div>
+
+                <button type="submit" class="w-full py-4 bg-[#0077b5] hover:bg-blue-600 text-white font-brand font-bold rounded-xl shadow-lg shadow-blue-500/30 transition-all transform hover:scale-[1.01] text-lg">
+                    提交申请，获取运营方案
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-2xl font-logo text-white">HereNow</div>
+            <div class="text-sm text-center md:text-right">
+                <p>&copy; 2025 HereNowAI.Inc - Marketing. All rights reserved.</p>
+                <div class="mt-2 space-x-4">
+                    <a href="index.html" class="hover:text-white transition-colors">返回首页</a>
+                    <a href="#" class="hover:text-white transition-colors">隐私政策</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 表单提交脚本 -->
+    <script>
+        const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyeM51r1bbsyz3RL5H8I3G8okFwqUZ3VMPXcZsqMU3kddiafRw__V20EgCdgySt6hw4/exec";
+
+        function submitToGoogleSheet(e, formType) {
+            e.preventDefault();
+            const form = e.target;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerText;
+
+            submitBtn.disabled = true;
+            submitBtn.innerText = '提交中...';
+
+            const formData = new FormData(form);
+            const data = new URLSearchParams();
+            data.append('formType', formType);
+            
+            // 处理 Radio
+            const status = form.querySelector('input[name="status"]:checked');
+            if (status) {
+                data.append('status', status.value);
+            }
+
+            for (const pair of formData) {
+                if (pair[0] !== 'status') {
+                    data.append(pair[0], pair[1]);
+                }
+            }
+
+            fetch(GOOGLE_SCRIPT_URL, {
+                method: 'POST',
+                body: data,
+                mode: 'no-cors'
+            })
+            .then(() => {
+                alert('申请已接收！我们会尽快与您联系。');
+                form.reset();
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+                alert('提交失败，请稍后重试。');
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerText = originalBtnText;
+            });
+        }
+    </script>
+    
+    <!-- 加载导航栏 -->
+    <script src="navbar.js"></script>
+</body>
+</html>

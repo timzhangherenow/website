@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 </div>
                                 <p class="text-xs text-slate-400">EEAT优质博客撰写与发布</p>
                             </a>
-                            <a href="#" class="block px-4 py-3 hover:bg-slate-50 rounded-xl transition-all group/item">
+                            <a href="LinkedIn-operation.html" class="block px-4 py-3 hover:bg-slate-50 rounded-xl transition-all group/item">
                                 <div class="font-bold text-slate-800 group-hover/item:text-brand mb-0.5 flex items-center gap-2">
                                     <svg class="w-4 h-4 text-[#0077b5]" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                                     LinkedIn代运营
@@ -115,8 +115,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
                 -->
 
-                <!-- 5. 价格介绍 -->
+                <!-- 5. 价格介绍 - 已隐藏 -->
+                <!--
                 <a href="#" class="px-4 py-2 hover:text-brand transition-colors rounded-lg hover:bg-slate-50">价格介绍</a>
+                -->
             </div>
 
             <button onclick="handleDiagnosisClick()" class="hidden md:inline-flex px-6 py-2.5 bg-brand hover:bg-brand-600 text-white font-brand font-bold rounded-full transition-all shadow-glow hover:shadow-lg transform hover:-translate-y-0.5 cursor-pointer">
@@ -160,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="font-bold text-slate-900">运营方案</div>
                     <div class="pl-4 space-y-3 border-l-2 border-slate-100">
                         <a href="blog-operation.html" class="block text-slate-600" onclick="toggleMobileMenu()">博客代运营</a>
-                        <a href="#" class="block text-slate-600">LinkedIn代运营</a>
+                        <a href="LinkedIn-operation.html" class="block text-slate-600" onclick="toggleMobileMenu()">LinkedIn代运营</a>
                         <a href="#" class="block text-slate-600">YouTube代运营</a>
                     </div>
                 </div>
@@ -176,7 +178,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
                 -->
 
+                <!-- 价格介绍 - 已隐藏 -->
+                <!--
                 <a href="#" class="text-lg font-medium text-slate-600">价格介绍</a>
+                -->
 
                 <button onclick="handleDiagnosisClick(); toggleMobileMenu()" class="w-full py-4 bg-brand text-white font-bold rounded-xl text-lg shadow-lg shadow-brand/20 mt-4">
                     预约沟通
