@@ -92,13 +92,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
                 </div>
 
-                <!-- 4. 资源中心 (Dropdown) -->
+                <!-- 4. 资源中心 (Dropdown) - 已隐藏 -->
+                <!--
                 <div class="relative group">
                     <button class="px-4 py-2 hover:text-brand transition-colors flex items-center gap-1 focus:outline-none rounded-lg hover:bg-slate-50 group-hover:text-brand">
                         资源中心
                         <svg class="w-3 h-3 text-slate-400 group-hover:text-brand transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
-                    <!-- Dropdown Menu -->
                     <div class="absolute left-1/2 -translate-x-1/2 top-full pt-4 w-40 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                         <div class="bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden p-2 ring-1 ring-black/5">
                             <a href="#" class="block px-4 py-3 hover:bg-slate-50 rounded-xl transition-all group/item">
@@ -113,6 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         </div>
                     </div>
                 </div>
+                -->
 
                 <!-- 5. 价格介绍 -->
                 <a href="#" class="px-4 py-2 hover:text-brand transition-colors rounded-lg hover:bg-slate-50">价格介绍</a>
@@ -156,6 +157,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
                 </div>
 
+                <!-- 资源中心 - 已隐藏 -->
+                <!--
                 <div class="space-y-3">
                     <div class="font-bold text-slate-900">资源中心</div>
                     <div class="pl-4 space-y-3 border-l-2 border-slate-100">
@@ -163,6 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <a href="#" class="block text-slate-600">客户案例</a>
                     </div>
                 </div>
+                -->
 
                 <a href="#" class="text-lg font-medium text-slate-600">价格介绍</a>
 
