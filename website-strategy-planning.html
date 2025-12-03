@@ -363,25 +363,25 @@
             </div>
 
             <form class="bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-lg space-y-6" onsubmit="submitToGoogleSheet(event, '策略规划页表单')">
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">网站域名</label>
+                    <input type="text" name="domain" class="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all" placeholder="例如：www.yourcompany.com" required>
+                </div>
+
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
-                        <label class="block text-sm font-bold text-slate-700 mb-2">您的称呼</label>
-                        <input type="text" name="name" class="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all" placeholder="例如：李经理" required>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">所在行业</label>
+                        <input type="text" name="industry" class="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all" placeholder="例如：机械设备" required>
                     </div>
                     <div>
-                        <label class="block text-sm font-bold text-slate-700 mb-2">微信/手机号</label>
-                        <input type="text" name="contact" class="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all" placeholder="方便我们预约时间" required>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">所在城市</label>
+                        <input type="text" name="city" class="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all" placeholder="例如：深圳" required>
                     </div>
                 </div>
 
                 <div>
-                    <label class="block text-sm font-bold text-slate-700 mb-2">公司网站或主营产品</label>
-                    <input type="text" name="product" class="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all" placeholder="方便我们提前做背景调研" required>
-                </div>
-
-                <div>
-                    <label class="block text-sm font-bold text-slate-700 mb-2">您觉得目前网站最大的问题是？(选填)</label>
-                    <textarea name="problem" rows="3" class="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all" placeholder="例如：只有产品参数、不知道写什么文章、客户停留时间短..."></textarea>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">微信/手机号 <span class="text-brand">*</span></label>
+                    <input type="text" name="contact" class="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all" placeholder="方便我们预约时间" required>
                 </div>
 
                 <button type="submit" class="w-full py-4 bg-brand hover:bg-brand-600 text-white font-brand font-bold rounded-xl shadow-lg shadow-brand/30 transition-all transform hover:scale-[1.01] text-lg">

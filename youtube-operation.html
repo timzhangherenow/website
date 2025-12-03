@@ -323,30 +323,25 @@
             </div>
 
             <form class="bg-white p-8 rounded-3xl border border-slate-100 shadow-lg space-y-6" onsubmit="submitToGoogleSheet(event, 'YouTube运营咨询')">
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">网站域名</label>
+                    <input type="text" name="domain" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#FF0000] focus:ring-1 focus:ring-[#FF0000] outline-none transition-all" placeholder="例如：www.yourcompany.com" required>
+                </div>
+
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
-                        <label class="block text-sm font-bold text-slate-700 mb-2">您的称呼</label>
-                        <input type="text" name="name" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#FF0000] focus:ring-1 focus:ring-[#FF0000] outline-none transition-all" placeholder="例如：王总" required>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">所在行业</label>
+                        <input type="text" name="industry" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#FF0000] focus:ring-1 focus:ring-[#FF0000] outline-none transition-all" placeholder="例如：数控机床" required>
                     </div>
                     <div>
-                        <label class="block text-sm font-bold text-slate-700 mb-2">微信/手机号</label>
-                        <input type="text" name="contact" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#FF0000] focus:ring-1 focus:ring-[#FF0000] outline-none transition-all" placeholder="方便我们联系" required>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">所在城市</label>
+                        <input type="text" name="city" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#FF0000] focus:ring-1 focus:ring-[#FF0000] outline-none transition-all" placeholder="例如：深圳" required>
                     </div>
                 </div>
 
                 <div>
-                    <label class="block text-sm font-bold text-slate-700 mb-2">您目前的视频素材情况？(选填)</label>
-                    <div class="grid grid-cols-2 gap-2 text-sm text-slate-600">
-                        <label class="flex items-center gap-2"><input type="radio" name="material" value="几乎没有素材"> 几乎没有素材</label>
-                        <label class="flex items-center gap-2"><input type="radio" name="material" value="有手机随拍"> 有一些手机随拍</label>
-                        <label class="flex items-center gap-2"><input type="radio" name="material" value="有宣传片原片"> 有宣传片/产品原片</label>
-                        <label class="flex items-center gap-2"><input type="radio" name="material" value="素材很丰富"> 素材非常丰富</label>
-                    </div>
-                </div>
-
-                <div>
-                    <label class="block text-sm font-bold text-slate-700 mb-2">主要产品或行业</label>
-                    <input type="text" name="product" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#FF0000] focus:ring-1 focus:ring-[#FF0000] outline-none transition-all" placeholder="例如：数控机床" required>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">微信/手机号 <span class="text-[#FF0000]">*</span></label>
+                    <input type="text" name="contact" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#FF0000] focus:ring-1 focus:ring-[#FF0000] outline-none transition-all" placeholder="方便我们联系" required>
                 </div>
 
                 <button type="submit" class="w-full py-4 bg-[#FF0000] hover:bg-red-700 text-white font-brand font-bold rounded-xl shadow-lg shadow-red-600/30 transition-all transform hover:scale-[1.01] text-lg">
@@ -389,17 +384,8 @@
             const formData = new FormData(form);
             const data = new URLSearchParams();
             data.append('formType', formType);
-            
-            // 处理 Radio
-            const material = form.querySelector('input[name="material"]:checked');
-            if (material) {
-                data.append('material', material.value);
-            }
-
             for (const pair of formData) {
-                if (pair[0] !== 'material') {
-                    data.append(pair[0], pair[1]);
-                }
+                data.append(pair[0], pair[1]);
             }
 
             // Debugging Log
