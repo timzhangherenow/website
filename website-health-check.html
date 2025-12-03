@@ -432,9 +432,11 @@
             const submitBtn = form.querySelector('button[type="submit"]');
             const originalBtnText = submitBtn.innerText;
 
+            // Loading state
             submitBtn.disabled = true;
             submitBtn.innerText = '提交中...';
 
+            // Collect form data
             const formData = new FormData(form);
             const data = new URLSearchParams();
             data.append('formType', formType);
@@ -442,10 +444,14 @@
                 data.append(pair[0], pair[1]);
             }
 
+            // Debugging Log
+            console.log('Submitting to:', GOOGLE_SCRIPT_URL);
+            console.log('Data:', data.toString());
+
             fetch(GOOGLE_SCRIPT_URL, {
                 method: 'POST',
                 body: data,
-                mode: 'no-cors'
+                mode: 'no-cors' // Important for Google Apps Script
             })
             .then(() => {
                 alert('申请已提交！我们会尽快进行诊断并联系您。');

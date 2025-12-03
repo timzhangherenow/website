@@ -398,6 +398,7 @@
 
     <!-- 表单提交脚本 -->
     <script>
+        // ⚠️ 替换为您自己的 Google Apps Script Web App URL
         const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyeM51r1bbsyz3RL5H8I3G8okFwqUZ3VMPXcZsqMU3kddiafRw__V20EgCdgySt6hw4/exec";
 
         function submitToGoogleSheet(e, formType) {
@@ -406,9 +407,11 @@
             const submitBtn = form.querySelector('button[type="submit"]');
             const originalBtnText = submitBtn.innerText;
 
+            // Loading state
             submitBtn.disabled = true;
-            submitBtn.innerText = '正在连接AI模型...';
+            submitBtn.innerText = '提交中...';
 
+            // Collect form data
             const formData = new FormData(form);
             const data = new URLSearchParams();
             data.append('formType', formType);
@@ -426,10 +429,14 @@
                 }
             }
 
+            // Debugging Log
+            console.log('Submitting to:', GOOGLE_SCRIPT_URL);
+            console.log('Data:', data.toString());
+
             fetch(GOOGLE_SCRIPT_URL, {
                 method: 'POST',
                 body: data,
-                mode: 'no-cors'
+                mode: 'no-cors' // Important for Google Apps Script
             })
             .then(() => {
                 alert('申请已接收！Tim 将在 24 小时内联系您演示 AI 知识库 Demo。');
@@ -437,7 +444,7 @@
             })
             .catch(error => {
                 console.error('Error!', error.message);
-                alert('提交失败，请稍后重试。');
+                alert('提交失败，请稍后重试或直接添加微信。');
             })
             .finally(() => {
                 submitBtn.disabled = false;
