@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <!-- Dropdown Menu -->
                     <div class="absolute left-1/2 -translate-x-1/2 top-full pt-4 w-60 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                         <div class="bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden p-2 ring-1 ring-black/5">
-                            <a href="#" class="block px-4 py-3 hover:bg-slate-50 rounded-xl transition-all group/item">
+                            <a href="blog-operation.html" class="block px-4 py-3 hover:bg-slate-50 rounded-xl transition-all group/item">
                                 <div class="font-bold text-slate-800 group-hover/item:text-brand mb-0.5 flex items-center gap-2">
                                     <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path></svg>
                                     博客代运营
@@ -159,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
                  <div class="space-y-3">
                     <div class="font-bold text-slate-900">运营方案</div>
                     <div class="pl-4 space-y-3 border-l-2 border-slate-100">
-                        <a href="#" class="block text-slate-600">博客代运营</a>
+                        <a href="blog-operation.html" class="block text-slate-600" onclick="toggleMobileMenu()">博客代运营</a>
                         <a href="#" class="block text-slate-600">LinkedIn代运营</a>
                         <a href="#" class="block text-slate-600">YouTube代运营</a>
                     </div>

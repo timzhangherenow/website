@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B2B SEO/GEO 博客代运营 | 适配AI搜索算法的人机协作写作 - HereNow</title>
+    <meta name="description" content="停止为低质量内容买单。HereNow提供基于成熟SOP的博客代运营服务，融合AI效率与人工质检，产出符合Google/AI算法偏好及EEAT标准的高质量B2B文章。单篇$10起，支持试写。">
+    
+    <!-- 1. Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 2. 主题配置 -->
+    <script src="theme.js"></script>
+    
+    <!-- 3. 自定义样式 -->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* 流水线传输动画 */
+        .pipeline-flow {
+            stroke-dasharray: 20;
+            animation: flowRight 1s linear infinite;
+        }
+        @keyframes flowRight {
+            to { stroke-dashoffset: -40; }
+        }
+        
+        /* 质量检测扫描动画 */
+        .scan-line {
+            height: 2px;
+            width: 100%;
+            background: #10b981;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: scanDown 2s ease-in-out infinite;
+            box-shadow: 0 0 10px #10b981;
+        }
+        @keyframes scanDown {
+            0% { top: 0%; opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { top: 100%; opacity: 0; }
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-500 bg-slate-50 antialiased selection:bg-brand selection:text-white">
+
+    <!-- 导航栏占位 -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section: 破解困局 -->
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-slate-900 text-white">
+        <div class="absolute inset-0 overflow-hidden opacity-20">
+            <div class="absolute -top-[200px] -right-[200px] w-[800px] h-[800px] bg-brand/20 rounded-full blur-[100px]"></div>
+            <div class="absolute bottom-0 left-0 w-full h-[300px] bg-gradient-to-t from-slate-900 to-transparent"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+            <div class="text-left">
+                <div class="inline-flex items-center px-4 py-2 rounded-full bg-white/10 border border-white/20 text-brand-100 font-bold text-xs uppercase tracking-wider mb-4 backdrop-blur-md">
+                    <span class="w-2 h-2 rounded-full bg-brand mr-2 animate-pulse"></span>
+                    SEO & GEO Content Writing
+                </div>
+                <div class="text-lg lg:text-xl text-slate-300 mb-6 font-medium">
+                    博客代运营
+                </div>
+                
+                <h1 class="font-brand text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+                    既要 AI 的速度，<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand to-orange-400">也要专家的深度</span>
+                </h1>
+                
+                <p class="text-xl text-slate-300 leading-relaxed mb-10">
+                    找海外写手太贵，自己写太累，直接用 ChatGPT 写太水？<br>
+                    我们通过<strong>“AI 知识库 + 成熟 SOP + 人工质检”</strong>的工作流，为您批量产出 <strong>Google/AI 算法喜欢</strong>、客户爱看的高质量 B2B 博客。
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button onclick="document.getElementById('trial-form').scrollIntoView({behavior: 'smooth'})" class="px-8 py-4 bg-brand hover:bg-brand-600 text-white font-brand font-bold rounded-2xl shadow-glow transition-all transform hover:scale-105 cursor-pointer flex items-center gap-2 justify-center">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+                        申请单篇试写
+                    </button>
+                    <div class="flex items-center gap-2 px-4 py-4 text-sm text-slate-400">
+                        <span class="w-2 h-2 rounded-full bg-green-500"></span> 单篇 $10 起
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visual: The Balance -->
+            <div class="relative h-[400px] flex items-center justify-center">
+                <!-- Scale Visual -->
+                <div class="relative w-full max-w-md aspect-video bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm p-6 flex flex-col justify-between">
+                    <div class="flex justify-between items-end mb-4">
+                        <div class="text-center w-1/3">
+                            <div class="h-24 w-16 bg-red-500/20 rounded-t-lg mx-auto border border-red-500/50 flex flex-col justify-end p-2 relative group">
+                                <div class="absolute -top-8 left-1/2 -translate-x-1/2 text-xs text-red-400 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">$50+/篇</div>
+                                <span class="text-xs text-red-300">海外写手</span>
+                            </div>
+                            <div class="text-xs mt-2 text-slate-400">太贵/不可控</div>
+                        </div>
+                        <div class="text-center w-1/3">
+                            <div class="h-40 w-16 bg-brand rounded-t-lg mx-auto shadow-[0_0_30px_rgba(255,107,61,0.4)] flex flex-col justify-end p-2 relative z-10">
+                                <span class="text-xs text-white font-bold block mb-1">HereNow</span>
+                                <span class="text-[10px] text-white/80 leading-tight">高性价比<br>适配GEO</span>
+                            </div>
+                            <div class="text-xs mt-2 text-brand font-bold">最优解</div>
+                        </div>
+                        <div class="text-center w-1/3">
+                            <div class="h-24 w-16 bg-slate-700 rounded-t-lg mx-auto border border-slate-600 flex flex-col justify-end p-2 relative group">
+                                <div class="absolute -top-8 left-1/2 -translate-x-1/2 text-xs text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">垃圾/废话</div>
+                                <span class="text-xs text-slate-400">纯AI工具</span>
+                            </div>
+                            <div class="text-xs mt-2 text-slate-400">无效/风险</div>
+                        </div>
+                    </div>
+                    <div class="border-t border-white/10 pt-4 text-center">
+                        <p class="text-sm text-slate-300">"我们需要的是<span class="text-brand">人工的质量</span> + <span class="text-brand">AI的效率</span>"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 痛点解析 -->
+    <section class="py-20 bg-white border-b border-slate-100">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h2 class="font-brand text-2xl md:text-3xl font-bold text-slate-900 mb-12">
+                为什么您的博客总是<br>
+                <span class="text-red-500 decoration-4 decoration-red-100 underline-offset-4 underline">没有流量，或者没有询盘？</span>
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8 text-left">
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="text-3xl mb-4">💸</div>
+                    <h3 class="font-bold text-lg text-slate-800 mb-2">成本陷阱</h3>
+                    <p class="text-sm text-slate-600">找 Upwork 上的 Native Speaker，一篇 1000 词的文章动辄 $50-$100，而且不懂您的行业，沟通成本极高。</p>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="text-3xl mb-4">🤖</div>
+                    <h3 class="font-bold text-lg text-slate-800 mb-2">AI 幻觉</h3>
+                    <p class="text-sm text-slate-600">直接扔给 ChatGPT 一个标题生成的内容，往往充斥着“车轱辘话”和虚假事实，被 Google/AI 判定为低价值内容。</p>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="text-3xl mb-4">🧩</div>
+                    <h3 class="font-bold text-lg text-slate-800 mb-2">缺乏策略</h3>
+                    <p class="text-sm text-slate-600">为了更新而更新，没有围绕 Topic Cluster（话题集群）布局，内容之间没有内链支撑，权重分散。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: AI 可行性分析 (打消顾虑) -->
+    <section class="py-24 bg-slate-50 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="bg-white rounded-3xl p-8 lg:p-12 shadow-sm border border-slate-100 relative">
+                <div class="absolute top-0 right-0 w-40 h-40 bg-green-100 rounded-bl-full opacity-50"></div>
+                
+                <div class="relative z-10">
+                    <span class="text-brand font-bold tracking-wider text-sm uppercase block mb-4">AI Feasibility Analysis</span>
+                    <h2 class="font-brand text-2xl md:text-3xl font-bold text-slate-900 mb-6">
+                        Google 讨厌的不是 AI<br>
+                        <span class="text-green-600">而是“对用户无用”的垃圾内容</span>
+                    </h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div class="space-y-4">
+                            <p class="text-slate-600 leading-relaxed">
+                                很多客户担心：“用 AI 写文章会不会被谷歌惩罚？”<br>
+                                <strong>答案是：NO。</strong>
+                            </p>
+                            <p class="text-slate-600 leading-relaxed">
+                                Google 官方在《Helpful Content Update》中明确表示：<strong>搜索引擎只关注内容是否对用户有价值，而不在乎是谁写的。</strong>
+                            </p>
+                            <p class="text-slate-600 leading-relaxed">
+                                只要内容逻辑通顺、解决了用户问题、阅读体验良好，就是好内容。现在的头部营销团队，AI 已经全面融入了创作工作流。问题的关键不在于工具，而在于<strong>是否拥有成熟的 SOP 质量控制体系</strong>。
+                            </p>
+                        </div>
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                            <h4 class="font-bold text-slate-800 mb-4">HereNow 的质量控制观：</h4>
+                            <ul class="space-y-3 text-sm">
+                                <li class="flex items-start gap-3">
+                                    <span class="text-green-500 mt-0.5">✓</span>
+                                    <span class="text-slate-600">AI 负责：结构发散、草稿生成、语法校对（效率提升 10 倍）</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-brand mt-0.5">✓</span>
+                                    <span class="text-slate-600">人工负责：事实核查、观点注入、情感润色（确保 100% 准确）</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-blue-500 mt-0.5">✓</span>
+                                    <span class="text-slate-600">结果导向：只为搜索意图和转化率负责，不拘泥于形式</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心方案：SOP流水线 -->
+    <section class="py-24 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-brand font-bold tracking-wider text-sm uppercase">Our Methodology</span>
+                <h2 class="font-brand text-3xl lg:text-4xl font-bold text-slate-900 mt-2">
+                    工业级内容生产流水线 (SOP)
+                </h2>
+                <p class="text-slate-500 mt-2">不仅是写作，更是一套严密的质量控制体系</p>
+            </div>
+
+            <!-- Pipeline Visual -->
+            <div class="relative">
+                <!-- Desktop Connection Line -->
+                <div class="hidden lg:block absolute top-12 left-0 w-full h-1 bg-slate-200 z-0">
+                    <div class="absolute top-0 left-0 h-full w-full bg-gradient-to-r from-transparent via-brand/50 to-transparent pipeline-flow"></div>
+                </div>
+
+                <div class="grid lg:grid-cols-5 gap-6 relative z-10">
+                    
+                    <!-- Step 1 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl shadow-sm border border-slate-100 relative group">
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-bold mb-4 mx-auto border-4 border-white shadow-sm z-10 relative">1</div>
+                        <h3 class="font-bold text-center text-slate-900 mb-2">调研与策划</h3>
+                        <p class="text-xs text-center text-slate-500">分析 SERP 竞争对手，提取 Top 3 文章的 Heading 结构，确定核心关键词与长尾词。</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl shadow-sm border border-slate-100 relative group">
+                        <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center font-bold mb-4 mx-auto border-4 border-white shadow-sm z-10 relative">2</div>
+                        <h3 class="font-bold text-center text-slate-900 mb-2">知识库投喂</h3>
+                        <p class="text-xs text-center text-slate-500">将您的产品手册、案例数据投喂给 AI (RAG)，确保生成内容包含您独有的品牌观点。</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl shadow-sm border border-slate-100 relative group">
+                        <div class="w-12 h-12 bg-brand-100 text-brand rounded-full flex items-center justify-center font-bold mb-4 mx-auto border-4 border-white shadow-sm z-10 relative">3</div>
+                        <h3 class="font-bold text-center text-slate-900 mb-2">AI 深度生成</h3>
+                        <p class="text-xs text-center text-slate-500">使用国际前沿AI模型及博客工具，结合分步提示词，生成初稿。包含封面图片 H标签、表格、列表。</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl shadow-sm border border-slate-100 relative group">
+                        <div class="w-12 h-12 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center font-bold mb-4 mx-auto border-4 border-white shadow-sm z-10 relative">4</div>
+                        <h3 class="font-bold text-center text-slate-900 mb-2">人工编辑润色</h3>
+                        <p class="text-xs text-center text-slate-500">由资深编辑修正语气、删除冗余废话、植入内链与 CTA，确保阅读流畅性。</p>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl shadow-sm border border-slate-100 relative group overflow-hidden">
+                        <div class="scan-line"></div>
+                        <div class="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center font-bold mb-4 mx-auto border-4 border-white shadow-sm z-10 relative">5</div>
+                        <h3 class="font-bold text-center text-slate-900 mb-2">EEAT/GEO 终检</h3>
+                        <p class="text-xs text-center text-slate-500">进行事实核查、原创度检测和 GEO 结构化数据适配，确保符合收录标准。</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 质量保证 (The Balance - Updated) -->
+    <section class="py-24 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-brand text-3xl font-bold text-slate-900 mb-4">
+                    打破“二元对立”<br>
+                    <span class="text-brand">寻找流量与转化的黄金平衡点</span>
+                </h2>
+                <p class="text-slate-500">很多内容要么全是关键词堆砌（给机器看），要么过于感性没有排名（给人看）。<br>HereNow 帮您找到完美的平衡。</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 items-center relative">
+                <!-- Left: Google/AI -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 text-center relative group hover:-translate-y-2 transition-all shadow-sm">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-3xl mb-6 mx-auto">🤖</div>
+                    <h3 class="font-brand text-xl font-bold text-slate-900 mb-4">Google/AI 算法喜欢</h3>
+                    <ul class="space-y-3 text-sm text-left text-slate-600">
+                        <li class="flex items-center gap-2"><span class="text-blue-500">✓</span> NLP 语义与关键词布局</li>
+                        <li class="flex items-center gap-2"><span class="text-blue-500">✓</span> 清晰的 H 标签结构</li>
+                        <li class="flex items-center gap-2"><span class="text-blue-500">✓</span> Schema 结构化数据</li>
+                        <li class="flex items-center gap-2"><span class="text-blue-500">✓</span> 丰富的内链网络</li>
+                    </ul>
+                </div>
+
+                <!-- Center: HereNow -->
+                <div class="relative z-10 text-center py-8">
+                    <!-- Connector Lines (Desktop) -->
+                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-blue-200 via-brand to-green-200 -z-10 rounded-full opacity-50"></div>
+                    
+                    <div class="bg-brand text-white w-24 h-24 rounded-2xl flex flex-col items-center justify-center mx-auto shadow-glow transform rotate-45 mb-6 border-4 border-white transition-transform hover:rotate-90">
+                        <div class="transform -rotate-45 font-logo text-xl">HereNow</div>
+                    </div>
+                    <h3 class="font-brand text-2xl font-bold text-slate-900 mb-2">平衡之道</h3>
+                    <p class="text-sm text-slate-500">流量 (排名) + 信任 (转化) <br>= 真实增长</p>
+                </div>
+
+                <!-- Right: Humans -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 text-center relative group hover:-translate-y-2 transition-all shadow-sm">
+                    <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-3xl mb-6 mx-auto">❤️</div>
+                    <h3 class="font-brand text-xl font-bold text-slate-900 mb-4">客户真人喜欢</h3>
+                    <ul class="space-y-3 text-sm text-left text-slate-600">
+                        <li class="flex items-center gap-2"><span class="text-green-500">✓</span> 解决实际业务痛点</li>
+                        <li class="flex items-center gap-2"><span class="text-green-500">✓</span> 有温度的品牌观点</li>
+                        <li class="flex items-center gap-2"><span class="text-green-500">✓</span> 真实的案例与数据</li>
+                        <li class="flex items-center gap-2"><span class="text-green-500">✓</span> 令人信服的 CTA</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 价格/模式对比 (Updated) -->
+    <section class="py-24 bg-white border-t border-slate-100">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="font-brand text-3xl font-bold text-slate-900">灵活的合作模式</h2>
+                <p class="text-slate-500 mt-2">把钱花在刀刃上，不为冗余的人力买单</p>
+            </div>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full bg-slate-50 rounded-2xl shadow-sm border border-slate-100 text-left border-collapse">
+                    <thead>
+                        <tr class="bg-white border-b border-slate-100">
+                            <th class="p-6 font-bold text-slate-900">对比维度</th>
+                            <th class="p-6 font-bold text-slate-500">海外本土写手</th>
+                            <th class="p-6 font-bold text-slate-500">纯 AI 工具生成</th>
+                            <th class="p-6 font-bold text-brand bg-brand-50/50 border-t-4 border-brand">HereNow 人机协作</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm text-slate-600">
+                        <tr class="border-b border-slate-100 bg-white">
+                            <td class="p-6 font-bold text-slate-800">单篇成本</td>
+                            <td class="p-6 text-red-500">$50 - $150</td>
+                            <td class="p-6">$0 - $5</td>
+                            <td class="p-6 font-bold text-green-600 bg-brand-50/20">$10 - $20</td>
+                        </tr>
+                        <tr class="border-b border-slate-100 bg-white">
+                            <td class="p-6 font-bold text-slate-800">专业深度</td>
+                            <td class="p-6">不懂产品，泛泛而谈</td>
+                            <td class="p-6">依赖提示词，内容啰嗦冗杂</td>
+                            <td class="p-6 font-bold text-green-600 bg-brand-50/20">基于知识库，懂产品</td>
+                        </tr>
+                        <tr class="border-b border-slate-100 bg-white">
+                            <td class="p-6 font-bold text-slate-800">交付效率</td>
+                            <td class="p-6">3-5 天/篇</td>
+                            <td class="p-6">5-15 分钟/篇</td>
+                            <td class="p-6 font-bold text-green-600 bg-brand-50/20">按需定制，灵活响应</td>
+                        </tr>
+                        <tr class="bg-white">
+                            <td class="p-6 font-bold text-slate-800">SEO 效果</td>
+                            <td class="p-6">不可控</td>
+                            <td class="p-6">质量一般，效果有波动风险</td>
+                            <td class="p-6 font-bold text-green-600 bg-brand-50/20">EEAT 达标，易收录</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom CTA Form -->
+    <section id="trial-form" class="py-24 bg-slate-50 relative">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center mb-10">
+                <h2 class="font-brand text-3xl font-bold text-slate-900 mb-2">申请单篇博客试写</h2>
+                <p class="text-slate-500">眼见为实。提供您的产品资料，我们为您产出一篇符合 EEAT 的高质量博客。</p>
+            </div>
+
+            <form class="bg-white p-8 rounded-3xl border border-slate-100 shadow-lg space-y-6" onsubmit="submitToGoogleSheet(event, '博客试写申请')">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">您的称呼</label>
+                        <input type="text" name="name" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all" placeholder="例如：李经理" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-2">微信/手机号</label>
+                        <input type="text" name="contact" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all" placeholder="接收试写稿件" required>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">您的网站域名</label>
+                    <input type="text" name="website" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all" placeholder="我们需分析您的行业风格" required>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-slate-700 mb-2">想试写的主题/关键词 (选填)</label>
+                    <input type="text" name="topic" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all" placeholder="例如：挖掘机如何保养">
+                </div>
+
+                <button type="submit" class="w-full py-4 bg-brand hover:bg-brand-600 text-white font-brand font-bold rounded-xl shadow-lg shadow-brand/30 transition-all transform hover:scale-[1.01] text-lg">
+                    提交申请，开始试写
+                </button>
+                <p class="text-center text-xs text-slate-400 mt-4">试写需支付少量基础费用，如不满意全额退款。</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-2xl font-logo text-white">HereNow</div>
+            <div class="text-sm text-center md:text-right">
+                <p>&copy; 2025 HereNowAI.Inc - Marketing. All rights reserved.</p>
+                <div class="mt-2 space-x-4">
+                    <a href="index.html" class="hover:text-white transition-colors">返回首页</a>
+                    <a href="#" class="hover:text-white transition-colors">隐私政策</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 表单提交脚本 -->
+    <script>
+        const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyeM51r1bbsyz3RL5H8I3G8okFwqUZ3VMPXcZsqMU3kddiafRw__V20EgCdgySt6hw4/exec";
+
+        function submitToGoogleSheet(e, formType) {
+            e.preventDefault();
+            const form = e.target;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerText;
+
+            submitBtn.disabled = true;
+            submitBtn.innerText = '提交中...';
+
+            const formData = new FormData(form);
+            const data = new URLSearchParams();
+            data.append('formType', formType);
+            for (const pair of formData) {
+                data.append(pair[0], pair[1]);
+            }
+
+            fetch(GOOGLE_SCRIPT_URL, {
+                method: 'POST',
+                body: data,
+                mode: 'no-cors'
+            })
+            .then(() => {
+                alert('申请成功！我们会尽快联系您确认试写细节。');
+                form.reset();
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+                alert('提交失败，请稍后重试。');
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerText = originalBtnText;
+            });
+        }
+    </script>
+    
+    <!-- 加载导航栏 -->
+    <script src="navbar.js"></script>
+</body>
+</html>
