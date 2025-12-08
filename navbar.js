@@ -197,7 +197,169 @@ document.addEventListener("DOMContentLoaded", function () {
   
   // 5. 初始化交互逻辑
   initNavbarLogic();
+  
+  // 6. 初始化弹窗关闭事件（如果弹窗存在）
+  initModalEvents();
 });
+
+// 初始化弹窗事件
+function initModalEvents() {
+  // 点击弹窗外部关闭（不覆盖已有的事件处理器）
+  document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('modal')) {
+      if (typeof window.closeModals === 'function') {
+        window.closeModals();
+      }
+    }
+  });
+  
+  // ESC 键关闭弹窗（不覆盖已有的事件处理器）
+  document.addEventListener('keydown', function(evt) {
+    if (evt.keyCode == 27 || evt.key === 'Escape') {
+      if (typeof window.closeModals === 'function') {
+        window.closeModals();
+      }
+    }
+  });
+}
+
+// 创建诊断弹窗 HTML（如果不存在）
+function createDiagnosisModalIfNeeded() {
+    // 检查弹窗是否已存在
+    if (document.getElementById('diagnosisModal')) {
+        return;
+    }
+    
+    // 创建弹窗 HTML（页面来源将在打开时动态设置）
+    const modalHTML = `
+        <div id="diagnosisModal" class="modal fixed inset-0 z-[100] flex items-center justify-center bg-slate-900/50 backdrop-blur-sm hidden">
+            <div class="bg-white p-8 rounded-3xl shadow-2xl relative max-w-lg w-full mx-4 modal-content">
+                <button onclick="closeModals()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+                
+                <div class="mb-6">
+                    <h3 class="font-brand text-2xl font-bold text-slate-900 mb-2">立即预约网站诊断</h3>
+                    <p class="text-slate-500 text-sm">提供专业的诊断建议。</p>
+                </div>
+
+                <form id="diagnosisForm" class="space-y-4" onsubmit="submitDiagnosisForm(event)">
+                    <input type="hidden" name="pageSource" id="pageSourceInput" value="">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">网站域名</label>
+                        <input type="text" name="domain" placeholder="例如：www.yourcompany.com" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all" required>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">所在行业</label>
+                            <input type="text" name="industry" placeholder="例如：机械设备" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">所在城市</label>
+                            <input type="text" name="city" placeholder="例如：深圳" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all" required>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">微信/手机号 <span class="text-brand">*</span></label>
+                        <input type="text" name="contact" placeholder="方便我们添加您进行诊断反馈" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all" required>
+                    </div>
+
+                    <button type="submit" class="w-full py-3.5 bg-brand hover:bg-brand-600 text-white font-brand font-bold rounded-xl shadow-lg shadow-brand/30 transition-all mt-2 transform hover:scale-[1.02]">
+                        立即咨询
+                    </button>
+                </form>
+            </div>
+        </div>
+    `;
+    
+    // 插入到 body
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+}
+
+// 提交诊断表单（通用函数）
+window.submitDiagnosisForm = function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn.innerText;
+
+    // Loading state
+    submitBtn.disabled = true;
+    submitBtn.innerText = '提交中...';
+
+    // 收集表单数据
+    const formData = new FormData(form);
+    const data = new URLSearchParams();
+    data.append('formType', '网站诊断');
+    
+    // 添加页面来源
+    const pageSource = formData.get('pageSource') || document.title || window.location.pathname;
+    data.append('pageSource', pageSource);
+    
+    for (const pair of formData) {
+        if (pair[0] !== 'pageSource') {
+            data.append(pair[0], pair[1]);
+        }
+    }
+
+    // 使用首页的 Google Script URL（如果存在）或使用默认值
+    const GOOGLE_SCRIPT_URL = window.GOOGLE_SCRIPT_URL || "https://script.google.com/macros/s/AKfycbyeM51r1bbsyz3RL5H8I3G8okFwqUZ3VMPXcZsqMU3kddiafRw__V20EgCdgySt6hw4/exec";
+
+    fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        body: data,
+        mode: 'no-cors'
+    })
+    .then(() => {
+        alert('提交成功！Tim会尽快联系您。');
+        form.reset();
+        closeModals();
+    })
+    .catch(error => {
+        console.error('Error!', error.message);
+        alert('提交失败，请稍后重试或直接添加微信。');
+    })
+    .finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerText = originalBtnText;
+    });
+}
+
+// 关闭弹窗函数（如果不存在）
+if (typeof window.closeModals !== 'function') {
+    window.closeModals = function() {
+        const modals = document.querySelectorAll('.modal');
+        modals.forEach(modal => {
+            modal.classList.remove('active');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        });
+    };
+}
+
+// 打开诊断弹窗函数（如果不存在）
+if (typeof window.openDiagnosisModal !== 'function') {
+    window.openDiagnosisModal = function() {
+        createDiagnosisModalIfNeeded();
+        const modal = document.getElementById('diagnosisModal');
+        if (modal) {
+            // 动态设置页面来源
+            const pageSourceInput = document.getElementById('pageSourceInput');
+            if (pageSourceInput) {
+                const pageSource = document.title || window.location.pathname || window.location.href || '未知页面';
+                pageSourceInput.value = pageSource;
+            }
+            
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.add('active');
+            }, 10);
+        }
+    };
+}
 
 // 全局函数：处理诊断点击
 window.handleDiagnosisClick = function() {
@@ -206,13 +368,13 @@ window.handleDiagnosisClick = function() {
     if (diagnosisForm) {
         diagnosisForm.scrollIntoView({behavior: 'smooth'});
     } 
-    // 如果首页有弹窗函数，打开弹窗
-    else if (typeof openDiagnosisModal === 'function') {
-        openDiagnosisModal();
-    } 
-    // 否则跳转到诊断页
+    // 否则打开弹窗（优先使用页面已有的函数，否则使用通用函数）
     else {
-        window.location.href = 'website-health-check.html';
+        if (typeof openDiagnosisModal === 'function') {
+            openDiagnosisModal();
+        } else {
+            window.openDiagnosisModal();
+        }
     }
 }
 
