@@ -92,7 +92,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
                 </div>
 
-                <!-- 4. 资源中心 (Dropdown) - 已隐藏 -->
+                <!-- 4. 价格方案 -->
+                <a href="pricing.html" class="px-4 py-2 hover:text-brand transition-colors rounded-lg hover:bg-slate-50">价格方案</a>
+
+                <!-- 5. 资源中心 (Dropdown) - 已隐藏 -->
                 <!--
                 <div class="relative group">
                     <button class="px-4 py-2 hover:text-brand transition-colors flex items-center gap-1 focus:outline-none rounded-lg hover:bg-slate-50 group-hover:text-brand">
@@ -115,10 +118,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
                 -->
 
-                <!-- 5. 价格介绍 - 已隐藏 -->
-                <!--
-                <a href="#" class="px-4 py-2 hover:text-brand transition-colors rounded-lg hover:bg-slate-50">价格介绍</a>
-                -->
             </div>
 
             <button onclick="handleDiagnosisClick()" class="hidden md:inline-flex px-6 py-2.5 bg-brand hover:bg-brand-600 text-white font-brand font-bold rounded-full transition-all shadow-glow hover:shadow-lg transform hover:-translate-y-0.5 cursor-pointer">
@@ -166,6 +165,8 @@ document.addEventListener("DOMContentLoaded", function () {
                         <a href="youtube-operation.html" class="block text-slate-600" onclick="toggleMobileMenu()">YouTube代运营</a>
                     </div>
                 </div>
+
+                <a href="pricing.html" class="text-lg font-medium text-slate-600" onclick="toggleMobileMenu()">价格方案</a>
 
                 <!-- 资源中心 - 已隐藏 -->
                 <!--
