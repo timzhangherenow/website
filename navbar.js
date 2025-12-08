@@ -239,8 +239,8 @@ function createDiagnosisModalIfNeeded() {
                 </button>
                 
                 <div class="mb-6">
-                    <h3 class="font-brand text-2xl font-bold text-slate-900 mb-2">立即预约网站诊断</h3>
-                    <p class="text-slate-500 text-sm">提供专业的诊断建议。</p>
+                    <h3 class="font-brand text-2xl font-bold text-slate-900 mb-2">立即预约咨询沟通</h3>
+                    <p class="text-slate-500 text-sm">提供专业的指导建议。</p>
                 </div>
 
                 <form id="diagnosisForm" class="space-y-4" onsubmit="submitDiagnosisForm(event)">
@@ -346,13 +346,6 @@ if (typeof window.openDiagnosisModal !== 'function') {
         createDiagnosisModalIfNeeded();
         const modal = document.getElementById('diagnosisModal');
         if (modal) {
-            // 动态设置页面来源
-            const pageSourceInput = document.getElementById('pageSourceInput');
-            if (pageSourceInput) {
-                const pageSource = document.title || window.location.pathname || window.location.href || '未知页面';
-                pageSourceInput.value = pageSource;
-            }
-            
             modal.classList.remove('hidden');
             setTimeout(() => {
                 modal.classList.add('active');
