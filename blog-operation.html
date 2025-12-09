@@ -15,6 +15,73 @@
     <!-- 3. 自定义样式 -->
     <link rel="stylesheet" href="style.css">
     
+    <!-- Schema.org Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://herenow.services/#organization",
+          "name": "HereNow",
+          "url": "https://herenow.services/",
+          "logo": "https://herenow.services/images/logo.png",
+          "slogan": "AI赋能，专家外挂，实现B2B增长",
+          "founder": {
+            "@type": "Person",
+            "name": "Tim Zhang",
+            "jobTitle": "Founder",
+            "url": "https://www.linkedin.com/in/tim-zhang-51204916a/"
+          },
+          "description": "HereNow 结合 AI 效率与一线B2B出海实战经验，为中国出海企业构建高询盘转化的内容营销护城河。",
+          "sameAs": [
+            "https://www.linkedin.com/in/tim-zhang-51204916a/"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+86-18924585563",
+            "contactType": "customer service",
+            "areaServed": "CN",
+            "availableLanguage": ["Chinese", "English"]
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "B2B SEO/GEO 博客代运营",
+          "provider": {
+            "@id": "https://herenow.services/#organization"
+          },
+          "description": "停止为低质量内容买单。HereNow提供基于成熟SOP的博客代运营服务，融合AI效率与人工质检，产出符合Google/AI算法偏好及EEAT标准的高质量B2B文章。单篇$10起，支持试写。",
+          "serviceType": "Content Writing Service",
+          "areaServed": "Global",
+          "offers": {
+            "@type": "Offer",
+            "price": "10",
+            "priceCurrency": "USD",
+            "description": "单篇博客文章起价 $10"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://herenow.services/blog-operation.html",
+          "url": "https://herenow.services/blog-operation.html",
+          "name": "B2B SEO/GEO 博客代运营 | 适配AI搜索算法的人机协作写作 - HereNow",
+          "description": "停止为低质量内容买单。HereNow提供基于成熟SOP的博客代运营服务，融合AI效率与人工质检，产出符合Google/AI算法偏好及EEAT标准的高质量B2B文章。单篇$10起，支持试写。",
+          "isPartOf": {
+            "@id": "https://herenow.services/#website"
+          },
+          "about": {
+            "@id": "https://herenow.services/#organization"
+          },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://herenow.services/images/share-card.png"
+          }
+        }
+      ]
+    }
+    </script>
+    
     <style>
         /* 流水线传输动画 */
         .pipeline-flow {

@@ -15,6 +15,73 @@
     <!-- 3. 自定义样式 -->
     <link rel="stylesheet" href="style.css">
     
+    <!-- Schema.org Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://herenow.services/#organization",
+          "name": "HereNow",
+          "url": "https://herenow.services/",
+          "logo": "https://herenow.services/images/logo.png",
+          "slogan": "AI赋能，专家外挂，实现B2B增长",
+          "founder": {
+            "@type": "Person",
+            "name": "Tim Zhang",
+            "jobTitle": "Founder",
+            "url": "https://www.linkedin.com/in/tim-zhang-51204916a/"
+          },
+          "description": "HereNow 结合 AI 效率与一线B2B出海实战经验，为中国出海企业构建高询盘转化的内容营销护城河。",
+          "sameAs": [
+            "https://www.linkedin.com/in/tim-zhang-51204916a/"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+86-18924585563",
+            "contactType": "customer service",
+            "areaServed": "CN",
+            "availableLanguage": ["Chinese", "English"]
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "B2B网站架构规划与内容策略定制",
+          "provider": {
+            "@id": "https://herenow.services/#organization"
+          },
+          "description": "HereNow 专注为 B2B 出海企业提供网站架构规划与内容策略定制服务。告别"产品说明书"式的自嗨网站，重构网站结构，增加解决方案、应用场景、客户案例与行业洞察等板块，打造高转化、高信任度的营销型官网，提升询盘转化率与品牌权威性。",
+          "serviceType": "Website Strategy Service",
+          "areaServed": "Global",
+          "offers": {
+            "@type": "Offer",
+            "price": "6000",
+            "priceCurrency": "CNY",
+            "description": "网站策略规划服务"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://herenow.services/website-strategy-planning.html",
+          "url": "https://herenow.services/website-strategy-planning.html",
+          "name": "B2B网站架构规划 | 解决方案与内容策略定制 - HereNow",
+          "description": "HereNow 专注为 B2B 出海企业提供网站架构规划与内容策略定制服务。告别"产品说明书"式的自嗨网站，重构网站结构，增加解决方案、应用场景、客户案例与行业洞察等板块，打造高转化、高信任度的营销型官网，提升询盘转化率与品牌权威性。",
+          "isPartOf": {
+            "@id": "https://herenow.services/#website"
+          },
+          "about": {
+            "@id": "https://herenow.services/#organization"
+          },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://herenow.services/images/share-card.png"
+          }
+        }
+      ]
+    }
+    </script>
+    
     <style>
         /* 简单的架构树动画 */
         .tree-line {
@@ -456,3 +523,4 @@
     <script src="navbar.js"></script>
 </body>
 </html>
+
